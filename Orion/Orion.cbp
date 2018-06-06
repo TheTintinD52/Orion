@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Orion" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Orion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Orion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../Orion" />
+		</Compiler>
+		<Unit filename="Arme.cpp" />
+		<Unit filename="Arme.h" />
+		<Unit filename="Block.cpp" />
+		<Unit filename="Block.h" />
+		<Unit filename="Case.cpp" />
+		<Unit filename="Case.h" />
+		<Unit filename="Coordonnees.cpp" />
+		<Unit filename="Coordonnees.h" />
+		<Unit filename="Emplacement.cpp" />
+		<Unit filename="Emplacement.h" />
+		<Unit filename="Ennemi.cpp" />
+		<Unit filename="Ennemi.h" />
+		<Unit filename="Inventaire.cpp" />
+		<Unit filename="Inventaire.h" />
+		<Unit filename="Item.cpp" />
+		<Unit filename="Item.h" />
+		<Unit filename="Joueur.cpp" />
+		<Unit filename="Joueur.h" />
+		<Unit filename="Personnage.cpp" />
+		<Unit filename="Personnage.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
