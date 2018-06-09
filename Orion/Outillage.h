@@ -45,8 +45,6 @@ protected:
     int m_id;
     std::string m_nom;
     int m_dura;
-
-private:
 };
 
 #endif // OUTILLAGE_H

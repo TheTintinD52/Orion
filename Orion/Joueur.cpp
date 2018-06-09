@@ -43,40 +43,13 @@ Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage()
     m_arme = new Arme();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a) : Personnage()
 {
     m_nom = nomPerso;
     m_vie = vie;
     m_endurance = endu;
     m_faim = faim;
-    m_arme = new Arme(id);
-}
-
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id, string nomArme) : Personnage()
-{
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
-    m_faim = faim;
-    m_arme = new Arme(id, nomArme);
-}
-
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id, string nomArme, int degat) : Personnage()
-{
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
-    m_faim = faim;
-    m_arme = new Arme(id, nomArme, degat);
-}
-
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id, string nomArme, int degat, int dura) : Personnage()
-{
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
-    m_faim = faim;
-    m_arme = new Arme(id, nomArme, degat, dura);
+    m_arme = new Arme(a);
 }
 
 Joueur::~Joueur()
@@ -109,9 +82,9 @@ Joueur& Joueur::operator=(const Joueur& rhs)//Pas bon !!!!!!!!!!!!!!!!!!!!!!!!!!
 void Joueur::affiche()
 {
     Personnage::affiche();
-    cout << "Faim : " << m_faim << endl;
-    cout << "Je suis le personnage du joueur." << endl;
+    cout << "Faim max : " << m_faim << endl;
     m_arme->affiche();
+    cout << "Je suis le personnage du joueur." << endl;
 }
 
 void Joueur::changerArme(Arme &a)

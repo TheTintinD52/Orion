@@ -47,6 +47,6 @@ Item& Item::operator=(const Item &i)
 
 void Item::affiche()
 {
-    cout << "Id : " << m_id << endl;
-    cout << "Nom de l'item: " << m_nom << endl;
+    cout << "Id objet : " << m_id << endl;
+    cout << "Nom de l'objet : " << m_nom << endl;
 }

@@ -53,9 +53,9 @@ Block& Block::operator=(const Block &b)
 
 void Block::affiche()
 {
-    cout << m_id << endl;
-    cout << m_nom << endl;
-    cout << m_velMinage << endl;
+    cout << "Id du block : " << m_id << endl;
+    cout << "Nom du block : " << m_nom << endl;
+    cout << "Vitesse de minage : " << m_velMinage << endl;
     m_emplct->affiche();
 }
 

@@ -45,7 +45,7 @@ Outillage::Outillage(const Outillage& other)
 
 Outillage& Outillage::operator=(const Outillage& rhs)
 {
-    if (this == &rhs)
+    if (this != &rhs)
     {
         m_id = rhs.m_id;
         m_nom = rhs.m_nom;
@@ -56,7 +56,7 @@ Outillage& Outillage::operator=(const Outillage& rhs)
 
 void Outillage::affiche()
 {
-    cout << "Id : " << m_id << endl;
-    cout << "Nom : " << m_nom << endl;
-    cout << "Dura : " << m_dura << endl;
+    cout << "Id outil : " << m_id << endl;
+    cout << "Nom outil : " << m_nom << endl;
+    cout << "Durabilite outil : " << m_dura << endl;
 }

@@ -30,36 +30,12 @@ Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage()
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu, int id) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &a) : Personnage()
 {
     m_nom = nomPerso;
     m_vie = vie;
     m_endurance = endu;
-    m_arme = new Arme(id);
-}
-
-Ennemi::Ennemi(string nomPerso, int vie, int endu, int id, string nomArme) : Personnage()
-{
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
-    m_arme = new Arme(id, nomArme);
-}
-
-Ennemi::Ennemi(string nomPerso, int vie, int endu, int id, string nomArme, int degat) : Personnage()
-{
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
-    m_arme = new Arme(id, nomArme, degat);
-}
-
-Ennemi::Ennemi(string nomPerso, int vie, int endu, int id, string nomArme, int degat, int dura) : Personnage()
-{
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
-    m_arme = new Arme(id, nomArme, degat, dura);
+    m_arme = new Arme(a);
 }
 
 Ennemi::Ennemi(const Ennemi& other) : Personnage(other)
@@ -74,7 +50,7 @@ Ennemi::~Ennemi()
 
 Ennemi& Ennemi::operator=(const Ennemi& rhs)
 {
-    if (this == &rhs)
+    if (this != &rhs)
     {
         Ennemi *mg;
         const Ennemi *md;
@@ -90,6 +66,6 @@ Ennemi& Ennemi::operator=(const Ennemi& rhs)
 void Ennemi::affiche()
 {
     Personnage::affiche();
-    cout << "Je suis un ennemi." << endl;
     m_arme->affiche();
+    cout << "Je suis un ennemi." << endl;
 }

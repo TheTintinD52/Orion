@@ -42,14 +42,14 @@ Arme::~Arme()
 
 }
 
-Arme::Arme(const Arme& other)
+Arme::Arme(const Arme& other) : Outillage(other)
 {
     m_degat = other.m_degat;
 }
 
 Arme& Arme::operator=(const Arme& rhs)
 {
-    if (this == &rhs)
+    if (this != &rhs)
     {
         m_degat = rhs.m_degat;
     }
@@ -59,5 +59,5 @@ Arme& Arme::operator=(const Arme& rhs)
 void Arme::affiche()
 {
     Outillage::affiche();
-    cout << "Degat : " << m_degat << endl;
+    cout << "Degat arme: " << m_degat << endl;
 }
