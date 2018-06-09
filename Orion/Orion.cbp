@@ -51,6 +51,8 @@
 		<Unit filename="Item.h" />
 		<Unit filename="Joueur.cpp" />
 		<Unit filename="Joueur.h" />
+		<Unit filename="Outillage.cpp" />
+		<Unit filename="Outillage.h" />
 		<Unit filename="Personnage.cpp" />
 		<Unit filename="Personnage.h" />
 		<Unit filename="main.cpp" />

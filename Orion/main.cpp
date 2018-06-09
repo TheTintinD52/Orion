@@ -53,7 +53,7 @@ int main()
 
 
     cout << endl;
-    Joueur j1("Paul","Epee", 10, 50);
+    Joueur j1("Paul", 150, 150, 150, 1, "Epee", 10, 256);
     j1.affiche();
     cout << endl;
 
@@ -62,10 +62,10 @@ int main()
     Inventaire i(2);
     //i.affiche(); ne marche pas !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    Ennemi e1("Tafiole","Baton",8,30);
+    Ennemi e1("Tafiole", 50, 50, 2, "Baton", 2, 10);
     e1.affiche();
     cout << endl;
-    Arme a1("BN",2,5);
+    Arme a1;
 
     j1.changerArme(a1);
     j1.affiche();

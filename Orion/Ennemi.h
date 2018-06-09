@@ -11,9 +11,12 @@ class Ennemi : public Personnage
     public:
         Ennemi();
         Ennemi(std::string);
-        Ennemi(std::string, std::string);
-        Ennemi(std::string, std::string, int);
-        Ennemi(std::string, std::string, int, int);
+        Ennemi(std::string, int);
+        Ennemi(std::string, int, int);
+        Ennemi(std::string, int, int, int);
+        Ennemi(std::string, int, int, int, std::string);
+        Ennemi(std::string, int, int, int, std::string, int);
+        Ennemi(std::string, int, int, int, std::string, int, int);
         virtual ~Ennemi();
         Ennemi(const Ennemi& other);
         Ennemi& operator=(const Ennemi& other);

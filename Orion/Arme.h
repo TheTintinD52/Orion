@@ -2,14 +2,16 @@
 #define ARME_H
 
 #include "string"
+#include "Outillage.h"
 
-class Arme
+class Arme : public Outillage
 {
 public:
     Arme();
-    Arme(std::string);
-    Arme(std::string, int);
-    Arme(std::string, int, int);
+    Arme(int);
+    Arme(int, std::string);
+    Arme(int, std::string, int);
+    Arme(int, std::string, int, int);
     virtual ~Arme();
     Arme(const Arme& other);
     Arme& operator=(const Arme& other);
@@ -24,27 +26,9 @@ public:
     {
         m_degat = val;
     }
-    int Getdurabilite()
-    {
-        return m_durabilite;
-    }
-    void Setdurabilite(int val)
-    {
-        m_durabilite = val;
-    }
-    std::string Getnom()
-    {
-        return m_nom;
-    }
-    void Setnom(std::string val)
-    {
-        m_nom = val;
-    }
 
 protected:
-    std::string m_nom;
     int m_degat;
-    int m_durabilite;
 };
 
 #endif // ARME_H

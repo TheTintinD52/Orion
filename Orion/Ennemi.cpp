@@ -6,36 +6,65 @@ using namespace std;
 
 Ennemi::Ennemi() : Personnage()
 {
-    m_vie = 50;
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nom) : Personnage()
+Ennemi::Ennemi(string nomPerso) : Personnage()
 {
-    m_vie = 50;
-    m_nom = nom;
+    m_nom = nomPerso;
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nom, string nomArme) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie) : Personnage()
 {
-    m_vie = 50;
-    m_nom = nom;
-    m_arme = new Arme(nomArme);
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nom, string nomArme, int degat) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage()
 {
-    m_vie = 50;
-    m_nom = nom;
-    m_arme = new Arme(nomArme, degat);
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nom, string nomArme, int degat, int durabilite) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie, int endu, int id) : Personnage()
 {
-    m_vie = 50;
-    m_nom = nom;
-    m_arme = new Arme(nomArme, degat, durabilite);
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_arme = new Arme(id);
+}
+
+Ennemi::Ennemi(string nomPerso, int vie, int endu, int id, string nomArme) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_arme = new Arme(id, nomArme);
+}
+
+Ennemi::Ennemi(string nomPerso, int vie, int endu, int id, string nomArme, int degat) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_arme = new Arme(id, nomArme, degat);
+}
+
+Ennemi::Ennemi(string nomPerso, int vie, int endu, int id, string nomArme, int degat, int dura) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_arme = new Arme(id, nomArme, degat, dura);
+}
+
+Ennemi::Ennemi(const Ennemi& other) : Personnage(other)
+{
+    m_arme = new Arme(*(other.m_arme));
 }
 
 Ennemi::~Ennemi()
@@ -43,15 +72,15 @@ Ennemi::~Ennemi()
     delete(m_arme);
 }
 
-Ennemi::Ennemi(const Ennemi& other)
-{
-    m_arme = new Arme(*(other.m_arme));
-}
-
 Ennemi& Ennemi::operator=(const Ennemi& rhs)
 {
     if (this == &rhs)
     {
+        Ennemi *mg;
+        const Ennemi *md;
+        mg = this;
+        md = &rhs;
+        (*mg) = (*md);
         delete(m_arme);
         m_arme = new Arme(*(rhs.m_arme));
     }

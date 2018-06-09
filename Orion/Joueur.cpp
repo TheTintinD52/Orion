@@ -10,32 +10,73 @@ Joueur::Joueur() : Personnage()
     m_arme = new Arme();
 }
 
-Joueur::Joueur(string nom) : Personnage()
+Joueur::Joueur(string nomPerso) : Personnage()
 {
-    m_nom = nom;
+    m_nom = nomPerso;
     m_faim = 100;
     m_arme = new Arme();
 }
 
-Joueur::Joueur(string nom, string nomArme) : Personnage()
+Joueur::Joueur(string nomPerso, int vie) : Personnage()
 {
-    m_nom = nom;
+    m_nom = nomPerso;
+    m_vie = vie;
     m_faim = 100;
-    m_arme = new Arme(nomArme);
+    m_arme = new Arme();
 }
 
-Joueur::Joueur(string nom, string nomArme, int degat) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage()
 {
-    m_nom = nom;
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
     m_faim = 100;
-    m_arme = new Arme(nomArme, degat);
+    m_arme = new Arme();
 }
 
-Joueur::Joueur(string nom, string nomArme, int degat, int durabilite) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage()
 {
-    m_nom = nom;
-    m_faim = 100;
-    m_arme = new Arme(nomArme, degat, durabilite);
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_faim = faim;
+    m_arme = new Arme();
+}
+
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_faim = faim;
+    m_arme = new Arme(id);
+}
+
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id, string nomArme) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_faim = faim;
+    m_arme = new Arme(id, nomArme);
+}
+
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id, string nomArme, int degat) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_faim = faim;
+    m_arme = new Arme(id, nomArme, degat);
+}
+
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, int id, string nomArme, int degat, int dura) : Personnage()
+{
+    m_nom = nomPerso;
+    m_vie = vie;
+    m_endurance = endu;
+    m_faim = faim;
+    m_arme = new Arme(id, nomArme, degat, dura);
 }
 
 Joueur::~Joueur()
@@ -43,7 +84,7 @@ Joueur::~Joueur()
     delete(m_arme);
 }
 
-Joueur::Joueur(const Joueur& other)
+Joueur::Joueur(const Joueur& other) : Personnage(other)
 {
     m_faim = other.m_faim;
     m_arme = new Arme(*(other.m_arme));
@@ -53,6 +94,11 @@ Joueur& Joueur::operator=(const Joueur& rhs)//Pas bon !!!!!!!!!!!!!!!!!!!!!!!!!!
 {
     if (this != &rhs)
     {
+        Joueur *mg;
+        const Joueur *md;
+        mg = this;
+        md = &rhs;
+        (*mg) = (*md);
         delete(m_arme);
         m_faim = rhs.m_faim;
         m_arme = new Arme(*(rhs.m_arme));

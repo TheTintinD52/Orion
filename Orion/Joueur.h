@@ -10,9 +10,13 @@ class Joueur : public Personnage
 public:
     Joueur();
     Joueur(std::string);
-    Joueur(std::string, std::string);
-    Joueur(std::string, std::string, int);
-    Joueur(std::string, std::string, int, int);
+    Joueur(std::string, int);
+    Joueur(std::string, int, int);
+    Joueur(std::string, int, int, int);
+    Joueur(std::string, int, int, int, int);
+    Joueur(std::string, int, int, int, int, std::string);
+    Joueur(std::string, int, int, int, int, std::string, int);
+    Joueur(std::string, int, int, int, int, std::string, int, int);
     virtual ~Joueur();
     Joueur(const Joueur&);
     Joueur& operator=(const Joueur&);
