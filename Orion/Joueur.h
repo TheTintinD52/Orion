@@ -10,7 +10,7 @@ class Joueur : public Personnage
 {
 public:
     Joueur();
-    Joueur(std::string);
+    Joueur(int);
     Joueur(std::string, int);
     Joueur(std::string, int, int);
     Joueur(std::string, int, int, int);

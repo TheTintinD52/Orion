@@ -10,6 +10,16 @@ Outil::Outil() : Outillage()
 
 }
 
+Outil::Outil(int id) : Outillage(id)
+{
+
+}
+
+Outil::Outil(int id, string nom) : Outillage(id, nom)
+{
+
+}
+
 Outil::Outil(int id, string nom, int dura) : Outillage(id, nom, dura)
 {
 

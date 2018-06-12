@@ -9,32 +9,24 @@ Arme::Arme() : Outillage()
     m_degat = 0;
 }
 
-Arme::Arme(int id) : Outillage()
+Arme::Arme(int id) : Outillage(id)
 {
     m_degat = 0;
-    m_id = id;
 }
 
-Arme::Arme(int id, string nom) : Outillage()
+Arme::Arme(int id, string nom) : Outillage(id, nom)
 {
     m_degat = 0;
-    m_id = id;
-    m_nom = nom;
 }
 
-Arme::Arme(int id, string nom, int degat) : Outillage()
+Arme::Arme(int id, string nom, int degat) : Outillage(id, nom)
 {
     m_degat = degat;
-    m_id = id;
-    m_nom = nom;
 }
 
-Arme::Arme(int id, string nom, int degat, int dura) : Outillage()
+Arme::Arme(int id, string nom, int degat, int dura) : Outillage(id, nom, dura)
 {
     m_degat = degat;
-    m_id = id;
-    m_nom = nom;
-    m_dura = dura;
 }
 
 Arme::~Arme()

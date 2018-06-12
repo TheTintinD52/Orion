@@ -11,15 +11,14 @@ Joueur::Joueur() : Personnage()
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso) : Personnage()
+Joueur::Joueur(int vie) : Personnage(vie)
 {
-    m_nom = nomPerso;
     m_faim = 100;
     m_arme = new Arme();
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie) : Personnage()
+Joueur::Joueur(string nomPerso, int vie) : Personnage(nomPerso, vie)
 {
     m_nom = nomPerso;
     m_vie = vie;
@@ -28,7 +27,7 @@ Joueur::Joueur(string nomPerso, int vie) : Personnage()
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu)
 {
     m_nom = nomPerso;
     m_vie = vie;
@@ -38,7 +37,7 @@ Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage()
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage(nomPerso, vie, endu)
 {
     m_nom = nomPerso;
     m_vie = vie;
@@ -48,7 +47,7 @@ Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage()
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a) : Personnage(nomPerso, vie, endu)
 {
     m_nom = nomPerso;
     m_vie = vie;
@@ -58,11 +57,8 @@ Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a) : Personna
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a, Outil &o) : Personnage()
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a, Outil &o) : Personnage(nomPerso, vie, endu)
 {
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
     m_faim = faim;
     m_arme = new Arme(a);
     m_outil = new Outil(o);

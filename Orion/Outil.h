@@ -8,6 +8,8 @@ class Outil : public Outillage
 {
 public:
     Outil();
+    Outil(int);
+    Outil(int, std::string);
     Outil(int, std::string, int);
     virtual ~Outil();
     Outil(const Outil&);

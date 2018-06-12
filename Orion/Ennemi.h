@@ -10,7 +10,7 @@ class Ennemi : public Personnage
 {
     public:
         Ennemi();
-        Ennemi(std::string);
+        Ennemi(int);
         Ennemi(std::string, int);
         Ennemi(std::string, int, int);
         Ennemi(std::string, int, int, Arme&);

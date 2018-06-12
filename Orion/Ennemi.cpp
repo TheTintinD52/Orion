@@ -9,32 +9,23 @@ Ennemi::Ennemi() : Personnage()
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nomPerso) : Personnage()
+Ennemi::Ennemi(int vie) : Personnage(vie)
 {
-    m_nom = nomPerso;
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nomPerso, int vie) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie) : Personnage(nomPerso, vie)
 {
-    m_nom = nomPerso;
-    m_vie = vie;
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu)
 {
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
     m_arme = new Arme();
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &a) : Personnage()
+Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &a) : Personnage(nomPerso, vie, endu)
 {
-    m_nom = nomPerso;
-    m_vie = vie;
-    m_endurance = endu;
     m_arme = new Arme(a);
 }
 
