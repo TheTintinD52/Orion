@@ -38,14 +38,14 @@ Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &a) : Personnage()
     m_arme = new Arme(a);
 }
 
-Ennemi::Ennemi(const Ennemi& other) : Personnage(other)
-{
-    m_arme = new Arme(*(other.m_arme));
-}
-
 Ennemi::~Ennemi()
 {
     delete(m_arme);
+}
+
+Ennemi::Ennemi(const Ennemi& other) : Personnage(other)
+{
+    m_arme = new Arme(*(other.m_arme));
 }
 
 Ennemi& Ennemi::operator=(const Ennemi& rhs)

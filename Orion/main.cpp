@@ -10,24 +10,25 @@
 #include "Inventaire.h"
 #include "Ennemi.h"
 #include "Arme.h"
-
+#include "Outil.h"
 
 using namespace std;
 
 int main()
 {
-    string str, str2;
-
     cout << "Bienvenue !" << endl;
+
+    Coordonnees c1(1,2,3);
+    Coordonnees c2(-3,4,3);
 
     Block a;
     Block b(1);
     Block c(2, "Terre");
-    Block d(3, "Pierre", 1.3);
+    Block d(3, "Pierre", 1.3, c2);
     Block e;
     e=d;
     cout << endl;
-    e.deplacer(2,3,4);
+    e.deplacer(c1);
     e.affiche();
 
     /*Item i1;
@@ -42,37 +43,33 @@ int main()
     Coordonnees c1(1,2,3);
     Coordonnees c2(-3,4,3);
 
-    Personnage p1;
-    cout << endl;
-    cout << endl;
-    Emplacement e1;
-    Emplacement e2(2);
-    Emplacement e3(2,3);
-    Emplacement e4(2,3,-5);
-    e4.affiche();*/
+    Personnage p1;*/
+    cout << endl << endl;
 
-
-    cout << endl;
     Arme a1(1, "Epee", 10, 256);
     Arme a2(2, "Hache", 25, 1024);
     Arme a3(3, "Baton", 2, 10);
 
     Joueur j1("Paul", 150, 150, 150, a1);
     j1.affiche();
-    cout << endl;
+    cout << endl << endl;
 
     //Case c1(3, "Sucre",4,5);
     //c1.affiche();
-    Inventaire i(2);
+    Inventaire i;
     //i.affiche(); ne marche pas !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     Ennemi e1("Tafiole", 50, 50, a3);
     e1.affiche();
-    cout << endl;
+    cout << endl << endl;
 
 
     j1.changerArme(a2);
     j1.affiche();
+    cout << endl << endl;
+
+    Outil o(4, "Pelle", 23);
+    o.affiche();
 
     return 0;
 }

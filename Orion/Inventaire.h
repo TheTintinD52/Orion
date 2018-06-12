@@ -7,7 +7,6 @@ class Inventaire
 {
 public:
     Inventaire();
-    Inventaire(int);
     virtual ~Inventaire();
     Inventaire(const Inventaire&);
     Inventaire& operator=(const Inventaire&);
@@ -34,7 +33,7 @@ public:
 protected:
     int m_nbl;
     int m_nbc;
-    Case **m_tab;
+    Case m_tab[20];
 };
 
 #endif // INVENTAIRE_H

@@ -2,7 +2,7 @@
 #define BLOCK_H
 
 #include "string"
-#include "Emplacement.h"
+#include "Coordonnees.h"
 
 class Block
 {
@@ -11,13 +11,14 @@ public:
     Block(int);
     Block(int, std::string);
     Block(int, std::string, double);
+    Block(int, std::string, double, Coordonnees &);
     Block(const Block&);
     virtual ~Block();
 
     Block& operator=(const Block &);
 
     void affiche();
-    void deplacer(int, int, int);
+    void deplacer(Coordonnees &);
 
     int Getid()
     {
@@ -43,16 +44,16 @@ public:
     {
         m_nom = val;
     }
-    Emplacement Getemplct()
+    Coordonnees Getemplct()
     {
-        return *m_emplct;
+        return *m_position;
     }
 
 protected:
     int m_id;
     std::string m_nom;
     double m_velMinage;
-    Emplacement *m_emplct;
+    Coordonnees *m_position;
 };
 
 #endif // BLOCK_H

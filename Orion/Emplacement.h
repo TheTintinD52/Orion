@@ -7,9 +7,7 @@ class Emplacement
 {
 public:
     Emplacement();
-    Emplacement(int);
-    Emplacement(int, int);
-    Emplacement(int, int, int);
+    Emplacement(Coordonnees &);
     virtual ~Emplacement();
     Emplacement(const Emplacement&);
     Emplacement& operator=(const Emplacement&);

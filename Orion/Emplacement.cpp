@@ -8,19 +8,9 @@ Emplacement::Emplacement()
     m_Coor = new Coordonnees();
 }
 
-Emplacement::Emplacement(int x)
+Emplacement::Emplacement(Coordonnees &c)
 {
-    m_Coor = new Coordonnees(x);
-}
-
-Emplacement::Emplacement(int x, int y)
-{
-    m_Coor = new Coordonnees(x,y);
-}
-
-Emplacement::Emplacement(int x, int y, int z)
-{
-    m_Coor = new Coordonnees(x,y,z);
+    m_Coor = new Coordonnees(c);
 }
 
 Emplacement::~Emplacement()
