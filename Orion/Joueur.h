@@ -3,6 +3,7 @@
 
 #include "Personnage.h"
 #include "Arme.h"
+#include "Outil.h"
 
 
 class Joueur : public Personnage
@@ -14,12 +15,14 @@ public:
     Joueur(std::string, int, int);
     Joueur(std::string, int, int, int);
     Joueur(std::string, int, int, int, Arme&);
+    Joueur(std::string, int, int, int, Arme&, Outil&);
     virtual ~Joueur();
     Joueur(const Joueur&);
     Joueur& operator=(const Joueur&);
 
     void affiche();
     void changerArme(Arme &);
+    void changerOutil(Outil &);
 
     int Getfaim()
     {
@@ -33,6 +36,7 @@ public:
 protected:
     int m_faim;
     Arme *m_arme;
+    Outil *m_outil;
 };
 
 #endif // JOUEUR_H

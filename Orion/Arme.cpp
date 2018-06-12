@@ -58,6 +58,7 @@ Arme& Arme::operator=(const Arme& rhs)
 
 void Arme::affiche()
 {
+    cout << "Arme : " << endl;
     Outillage::affiche();
     cout << "Degat arme: " << m_degat << endl;
 }

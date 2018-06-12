@@ -40,5 +40,6 @@ Outil& Outil::operator=(const Outil& rhs)
 
 void Outil::affiche()
 {
+    cout << "Outil : " << endl;
     Outillage::affiche();
 }
