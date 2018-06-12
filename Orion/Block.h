@@ -44,7 +44,7 @@ public:
     {
         m_nom = val;
     }
-    Coordonnees Getemplct()
+    Coordonnees Getposition()
     {
         return *m_position;
     }
