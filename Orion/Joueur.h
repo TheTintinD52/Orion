@@ -23,6 +23,7 @@ public:
     void affiche();
     void changerArme(Arme &);
     void changerOutil(Outil &);
+    void attaquer(Personnage &);
 
     int Getfaim()
     {

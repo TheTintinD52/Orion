@@ -15,6 +15,8 @@ public:
     Personnage& operator=(const Personnage&);
 
     void affiche();
+    void recevoirDegats(int);
+    void boirePotionDeVie(int);
 
     int Getvie()
     {
@@ -40,7 +42,6 @@ public:
     {
         m_endurance = val;
     }
-
 protected:
     std::string m_nom;
     int m_vie;

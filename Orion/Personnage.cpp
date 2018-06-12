@@ -52,3 +52,22 @@ void Personnage::affiche()
     cout << "Vie : " << m_vie << endl;
     cout << "Endurance : " << m_endurance << endl;
 }
+
+void Personnage::recevoirDegats(int nbDegats)
+{
+    cout << m_nom << " recoit " << nbDegats << " points de vie en moins." << endl;
+
+    m_vie -= nbDegats;
+
+    if (m_vie <= 0)
+        m_vie = 0;
+}
+
+void Personnage::boirePotionDeVie(int qtVie)
+{
+    cout << m_nom << " boit une potion qui lui redonne " << qtVie << " points de vie." << endl;
+    m_vie += qtVie;
+
+    if (m_vie > 100)
+        m_vie = 100;
+}

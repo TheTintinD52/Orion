@@ -115,3 +115,13 @@ void Joueur::changerOutil(Outil &o)
     delete(m_outil);
     m_outil = new Outil(o);
 }
+
+void Joueur::attaquer(Personnage &cible)
+{
+    cout << m_nom << " attaque " << cible.Getnom() << "." << endl;
+
+    if (m_arme != NULL)
+        cible.recevoirDegats(m_arme->Getdegat());
+    else
+        cible.recevoirDegats(5);
+}

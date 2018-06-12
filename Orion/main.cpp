@@ -17,9 +17,9 @@ int main()
 {
     cout << "Bienvenue !" << endl;
 
-    Arme a1(1, "Epee", 10, 256);
-    Arme a2(2, "Hache", 25, 1024);
-    Arme a3(3, "Baton", 2, 10);
+    Arme a1(1, "Epee", 25, 256);
+    Arme a2(2, "Hache", 40, 1024);
+    Arme a3(3, "Baton", 7, 10);
 
     Outil o1(4, "Pelle", 23);
 
@@ -65,6 +65,10 @@ int main()
     j1.changerArme(a2);
     j1.affiche();
     cout << endl << endl;
+    j1.attaquer(e1);
+    cout << e1.Getvie() << endl;
+    e1.boirePotionDeVie(20);
+    cout << e1.Getvie() << endl;
 
     return 0;
 }
