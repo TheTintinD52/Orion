@@ -19,6 +19,7 @@ class Ennemi : public Personnage
         Ennemi& operator=(const Ennemi& other);
 
         void affiche();
+        void boirePotionDeVie(int);
 
     protected:
         Arme *m_arme;

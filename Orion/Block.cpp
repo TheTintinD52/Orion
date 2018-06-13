@@ -1,7 +1,6 @@
 #include "string"
 #include "iostream"
 #include "Block.h"
-#include "Emplacement.h"
 
 using namespace std;
 

@@ -16,7 +16,6 @@ public:
 
     void affiche();
     void recevoirDegats(int);
-    void boirePotionDeVie(int);
 
     int Getvie()
     {

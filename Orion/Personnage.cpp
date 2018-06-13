@@ -62,12 +62,3 @@ void Personnage::recevoirDegats(int nbDegats)
     if (m_vie <= 0)
         m_vie = 0;
 }
-
-void Personnage::boirePotionDeVie(int qtVie)
-{
-    cout << m_nom << " boit une potion qui lui redonne " << qtVie << " points de vie." << endl;
-    m_vie += qtVie;
-
-    if (m_vie > 100)
-        m_vie = 100;
-}

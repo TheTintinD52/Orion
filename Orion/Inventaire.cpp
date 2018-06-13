@@ -79,9 +79,7 @@ void Inventaire::init(Item &obj)
 
 void Inventaire::Jeter(Item &obj)
 {
-    int j;
-
-    for (int i = 0, j = 0; i<20; i++)
+    for (int i = 0; i<20; i++)
     {
         if (m_tab[i] == obj)
         {

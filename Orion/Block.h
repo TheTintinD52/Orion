@@ -11,14 +11,14 @@ public:
     Block(int);
     Block(int, std::string);
     Block(int, std::string, double);
-    Block(int, std::string, double, Coordonnees &);
+    Block(int, std::string, double, Coordonnees&);
     Block(const Block&);
     virtual ~Block();
 
-    Block& operator=(const Block &);
+    Block& operator=(const Block&);
 
     void affiche();
-    void deplacer(Coordonnees &);
+    void deplacer(Coordonnees&);
 
     int Getid()
     {

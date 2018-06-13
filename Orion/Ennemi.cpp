@@ -60,3 +60,12 @@ void Ennemi::affiche()
     m_arme->affiche();
     cout << "Je suis un ennemi." << endl;
 }
+
+void Ennemi::boirePotionDeVie(int qtVie)
+{
+    cout << m_nom << " boit une potion qui lui redonne " << qtVie << " points de vie." << endl;
+    m_vie += qtVie;
+
+    if (m_vie > 100)
+        m_vie = 100;
+}

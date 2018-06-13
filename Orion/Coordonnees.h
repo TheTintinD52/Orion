@@ -10,8 +10,8 @@ public:
     Coordonnees(int, int);
     Coordonnees(int, int, int);
     virtual ~Coordonnees();
-    Coordonnees(const Coordonnees& other);
-    Coordonnees& operator=(const Coordonnees& other);
+    Coordonnees(const Coordonnees&);
+    Coordonnees& operator=(const Coordonnees&);
 
     void affiche();
 

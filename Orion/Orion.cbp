@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 			<Add directory="../Orion" />
 		</Compiler>
+		<Unit filename="Animal.cpp" />
+		<Unit filename="Animal.h" />
 		<Unit filename="Arme.cpp" />
 		<Unit filename="Arme.h" />
 		<Unit filename="Block.cpp" />
@@ -51,6 +53,8 @@
 		<Unit filename="Outil.h" />
 		<Unit filename="Outillage.cpp" />
 		<Unit filename="Outillage.h" />
+		<Unit filename="PNJ.cpp" />
+		<Unit filename="PNJ.h" />
 		<Unit filename="Personnage.cpp" />
 		<Unit filename="Personnage.h" />
 		<Unit filename="main.cpp" />

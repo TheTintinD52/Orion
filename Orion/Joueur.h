@@ -29,6 +29,7 @@ public:
     void attaquer(Personnage &);
     void prendreItem(Item &);
     void jeterItem(Item &);
+    void boirePotionDeVie(int);
 
     int Getfaim()
     {

@@ -13,8 +13,8 @@ public:
     Item(const Item&);
     virtual ~Item();
 
-    Item& operator=(const Item &);
-    bool operator==(const Item &);
+    Item& operator=(const Item&);
+    bool operator==(const Item&);
 
     void affiche();
     void init();
