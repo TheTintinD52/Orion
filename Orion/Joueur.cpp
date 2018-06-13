@@ -132,12 +132,14 @@ void Joueur::afficheInventaire()
 void Joueur::changerArme(Arme &a)
 {
     delete(m_arme);
+    cout << m_nom << " trouve " << a.Getnom() << " et s'en equipe." << endl;
     m_arme = new Arme(a);
 }
 
 void Joueur::changerOutil(Outil &o)
 {
     delete(m_outil);
+    cout << m_nom << " trouve " << o.Getnom() << " et s'en equipe." << endl;
     m_outil = new Outil(o);
 }
 
