@@ -4,29 +4,29 @@
 
 using namespace std;
 
-Arme::Arme() : Outillage()
+Arme::Arme() : Outillage(), m_degat(0)
 {
-    m_degat = 0;
+
 }
 
-Arme::Arme(int id) : Outillage(id)
+Arme::Arme(int id) : Outillage(id), m_degat(0)
 {
-    m_degat = 0;
+
 }
 
-Arme::Arme(int id, string nom) : Outillage(id, nom)
+Arme::Arme(int id, string nom) : Outillage(id, nom), m_degat(0)
 {
-    m_degat = 0;
+
 }
 
-Arme::Arme(int id, string nom, int degat) : Outillage(id, nom)
+Arme::Arme(int id, string nom, int degat) : Outillage(id, nom), m_degat(degat)
 {
-    m_degat = degat;
+
 }
 
-Arme::Arme(int id, string nom, int degat, int dura) : Outillage(id, nom, dura)
+Arme::Arme(int id, string nom, int degat, int dura) : Outillage(id, nom, dura), m_degat(degat)
 {
-    m_degat = degat;
+
 }
 
 Arme::~Arme()
@@ -34,15 +34,20 @@ Arme::~Arme()
 
 }
 
-Arme::Arme(const Arme& other) : Outillage(other)
+Arme::Arme(const Arme& other) : Outillage(other), m_degat(other.m_degat)
 {
-    m_degat = other.m_degat;
+
 }
 
 Arme& Arme::operator=(const Arme& rhs)
 {
     if (this != &rhs)
     {
+        Outillage *mg;
+        const Outillage *md;
+        mg = this;
+        md = &rhs;
+        (*mg) = (*md);
         m_degat = rhs.m_degat;
     }
     return *this;

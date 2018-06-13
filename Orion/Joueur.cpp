@@ -150,3 +150,13 @@ void Joueur::attaquer(Personnage &cible)
     else
         cible.recevoirDegats(5);
 }
+
+void Joueur::prendreItem(Item &i)
+{
+    m_inventaire->init(i);
+}
+
+void Joueur::jeterItem(Item &i)
+{
+    m_inventaire->Jeter(i);
+}

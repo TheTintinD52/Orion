@@ -58,3 +58,35 @@ void Inventaire::init(int nb)
         m_tab[nb].init();
     }
 }
+
+void Inventaire::init(Item &obj)
+{
+    int j;
+
+    for (int i = 0, j = 0; i<20; i++)
+    {
+        if (m_tab[i].Getid() == 0 && j != 1)
+        {
+            m_tab[i] = obj;
+            j++;
+        }
+        else if (m_tab[i].Getid() == 0 && j == 1)
+        {}
+        else
+            cout << "Inventaire plein !" << endl;
+    }
+}
+
+void Inventaire::Jeter(Item &obj)
+{
+    int j;
+
+    for (int i = 0, j = 0; i<20; i++)
+    {
+        if (m_tab[i] == obj)
+        {
+            m_tab[i].Setid(0);
+            m_tab[i].Setnom("None");
+        }
+    }
+}

@@ -66,8 +66,9 @@ int main()
     e1.boirePotionDeVie(20);
     cout << e1.Getvie() << endl;
     cout << endl << endl;
+    j1.prendreItem(i5);
+    j1.prendreItem(a1);
     j1.afficheInventaire();
-    // faire en sorte que l'on puisse modifier l'inventaire du joueur
 
     return 0;
 }

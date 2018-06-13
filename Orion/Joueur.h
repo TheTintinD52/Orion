@@ -27,6 +27,8 @@ public:
     void changerArme(Arme &);
     void changerOutil(Outil &);
     void attaquer(Personnage &);
+    void prendreItem(Item &);
+    void jeterItem(Item &);
 
     int Getfaim()
     {

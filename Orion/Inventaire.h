@@ -14,6 +14,8 @@ public:
 
     void affiche();
     void init(int);
+    void init(Item &);
+    void Jeter(Item &);
 
 protected:
     Item *m_tab;

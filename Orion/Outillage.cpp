@@ -3,32 +3,24 @@
 
 using namespace std;
 
-Outillage::Outillage()
+Outillage::Outillage() : Item(), m_dura(0)
 {
-    m_id = 0;
-    m_nom = "None";
-    m_dura = 0;
+
 }
 
-Outillage::Outillage(int id)
+Outillage::Outillage(int id) : Item(id), m_dura(0)
 {
-    m_id = id;
-    m_nom = "None";
-    m_dura = 0;
+
 }
 
-Outillage::Outillage(int id, string nom)
+Outillage::Outillage(int id, string nom) : Item(id, nom), m_dura(0)
 {
-    m_id = id;
-    m_nom = nom;
-    m_dura = 0;
+
 }
 
-Outillage::Outillage(int id, string nom, int dura)
+Outillage::Outillage(int id, string nom, int dura) : Item(id, nom), m_dura(dura)
 {
-    m_id = id;
-    m_nom = nom;
-    m_dura = dura;
+
 }
 
 Outillage::~Outillage()
@@ -36,19 +28,20 @@ Outillage::~Outillage()
 
 }
 
-Outillage::Outillage(const Outillage& other)
+Outillage::Outillage(const Outillage& other) : Item(other), m_dura(other.m_dura)
 {
-    m_id = other.m_id;
-    m_nom = other.m_nom;
-    m_dura = other.m_dura;
+
 }
 
 Outillage& Outillage::operator=(const Outillage& rhs)
 {
     if (this != &rhs)
     {
-        m_id = rhs.m_id;
-        m_nom = rhs.m_nom;
+        Item *mg;
+        const Item *md;
+        mg = this;
+        md = &rhs;
+        (*mg) = (*md);
         m_dura = rhs.m_dura;
     }
     return *this;
@@ -56,7 +49,6 @@ Outillage& Outillage::operator=(const Outillage& rhs)
 
 void Outillage::affiche()
 {
-    cout << "Id outil : " << m_id << endl;
-    cout << "Nom outil : " << m_nom << endl;
+    Item::affiche();
     cout << "Durabilite outil : " << m_dura << endl;
 }

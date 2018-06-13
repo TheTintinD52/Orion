@@ -100,7 +100,7 @@
 1528033786 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\arme.h
 	"string"
 
-1528815204 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\arme.cpp
+1528895688 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\arme.cpp
 	"iostream"
 	"Arme.h"
 	"string"
@@ -133,7 +133,7 @@
 	"Item.h"
 	"Coordonnees.h"
 
-1528886131 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.h
+1528894773 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.h
 	"string"
 
 1528546066 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\coordonnees.cpp
@@ -157,32 +157,32 @@
 1528818242 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\personnage.h
 	"string"
 
-1528887800 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.cpp
+1528895038 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.cpp
 	"Inventaire.h"
 	"iostream"
 	"Item.h"
 
-1528887175 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.h
+1528894743 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.h
 	"Item.h"
 	"vector"
 
-1528887491 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.cpp
+1528894905 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.cpp
 	"string"
 	"iostream"
 	"Item.h"
 
-1528888089 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.cpp
+1528895065 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.cpp
 	"Joueur.h"
 	"iostream"
 	"string"
 
-1528887963 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.h
+1528894743 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.h
 	"Personnage.h"
 	"Arme.h"
 	"Outil.h"
 	"Inventaire.h"
 
-1528888289 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\main.cpp
+1528895122 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\main.cpp
 	"iostream"
 	"string"
 	"Block.h"
@@ -199,12 +199,13 @@
 	"Personnage.h"
 	"iostream"
 
-1528567460 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\outillage.cpp
+1528895537 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\outillage.cpp
 	"Outillage.h"
 	"iostream"
 
-1528567460 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\outillage.h
+1528895283 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\outillage.h
 	"string"
+	"Item.h"
 
 1528815300 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\outil.cpp
 	"Outil.h"

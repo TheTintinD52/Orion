@@ -45,6 +45,16 @@ Item& Item::operator=(const Item &i)
     return *this;
 }
 
+bool Item::operator==(const Item &i)
+{
+    if (m_nom == i.m_nom && m_id == i.m_id)
+    {
+        return true;
+    }
+    else
+        return false;
+}
+
 void Item::affiche()
 {
     cout << "Id objet : " << m_id << "    Nom de l'objet : " << m_nom << endl;
