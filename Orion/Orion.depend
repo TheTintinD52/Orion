@@ -133,7 +133,7 @@
 	"Item.h"
 	"Coordonnees.h"
 
-1528546066 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.h
+1528886131 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.h
 	"string"
 
 1528546066 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\coordonnees.cpp
@@ -157,29 +157,32 @@
 1528818242 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\personnage.h
 	"string"
 
-1528796847 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.cpp
+1528887800 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.cpp
 	"Inventaire.h"
 	"iostream"
+	"Item.h"
 
-1528796847 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.h
-	"Case.h"
+1528887175 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.h
+	"Item.h"
+	"vector"
 
-1528567507 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.cpp
+1528887491 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\item.cpp
 	"string"
 	"iostream"
 	"Item.h"
 
-1528818047 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.cpp
+1528888089 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.cpp
 	"Joueur.h"
 	"iostream"
 	"string"
 
-1528815932 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.h
+1528887963 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\joueur.h
 	"Personnage.h"
 	"Arme.h"
 	"Outil.h"
+	"Inventaire.h"
 
-1528818356 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\main.cpp
+1528887924 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\main.cpp
 	"iostream"
 	"string"
 	"Block.h"
@@ -187,7 +190,6 @@
 	"Coordonnees.h"
 	"Personnage.h"
 	"Joueur.h"
-	"Case.h"
 	"Inventaire.h"
 	"Ennemi.h"
 	"Arme.h"

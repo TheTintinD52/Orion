@@ -1,7 +1,8 @@
 #ifndef INVENTAIRE_H
 #define INVENTAIRE_H
 
-#include "Case.h"
+#include "Item.h"
+#include "vector"
 
 class Inventaire
 {
@@ -12,28 +13,10 @@ public:
     Inventaire& operator=(const Inventaire&);
 
     void affiche();
-
-    int Getnbl()
-    {
-        return m_nbl;
-    }
-    void Setnbl(int nbl)
-    {
-        m_nbl = nbl;
-    }
-    int Getnbc()
-    {
-        return m_nbc;
-    }
-    void Setnbc(int nbc)
-    {
-        m_nbc = nbc;
-    }
+    void init(int);
 
 protected:
-    int m_nbl;
-    int m_nbc;
-    Case m_tab[20];
+    Item *m_tab;
 };
 
 #endif // INVENTAIRE_H

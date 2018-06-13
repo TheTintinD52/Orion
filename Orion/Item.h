@@ -16,6 +16,7 @@ public:
     Item& operator=(const Item &);
 
     void affiche();
+    void init();
 
     int Getid()
     {

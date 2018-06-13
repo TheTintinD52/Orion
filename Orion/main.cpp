@@ -5,7 +5,6 @@
 #include "Coordonnees.h"
 #include "Personnage.h"
 #include "Joueur.h"
-#include "Case.h"
 #include "Inventaire.h"
 #include "Ennemi.h"
 #include "Arme.h"
@@ -17,13 +16,15 @@ int main()
 {
     cout << "Bienvenue !" << endl;
 
+    Inventaire i;
+
     Arme a1(1, "Epee", 25, 256);
     Arme a2(2, "Hache", 40, 1024);
     Arme a3(3, "Baton", 7, 10);
 
     Outil o1(4, "Pelle", 23);
 
-    Joueur j1("Paul", 150, 150, 150, a1, o1);
+    Joueur j1("Paul", 150, 150, 150, i, a1, o1);
 
     Ennemi e1("Tafiole", 50, 50, a3);
 
@@ -54,11 +55,6 @@ int main()
     j1.affiche();
     cout << endl << endl;
 
-    //Case c1(3, "Sucre",4,5);
-    //c1.affiche();
-    Inventaire i;
-    //i.affiche(); ne marche pas !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
     e1.affiche();
     cout << endl << endl;
 
@@ -69,6 +65,9 @@ int main()
     cout << e1.Getvie() << endl;
     e1.boirePotionDeVie(20);
     cout << e1.Getvie() << endl;
+    cout << endl << endl;
+    j1.afficheInventaire();
+    // faire en sorte que l'on puisse modifier l'inventaire du joueur
 
     return 0;
 }

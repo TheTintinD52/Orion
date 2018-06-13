@@ -37,8 +37,6 @@
 		<Unit filename="Arme.h" />
 		<Unit filename="Block.cpp" />
 		<Unit filename="Block.h" />
-		<Unit filename="Case.cpp" />
-		<Unit filename="Case.h" />
 		<Unit filename="Coordonnees.cpp" />
 		<Unit filename="Coordonnees.h" />
 		<Unit filename="Ennemi.cpp" />

@@ -7,6 +7,7 @@ using namespace std;
 Joueur::Joueur() : Personnage()
 {
     m_faim = 100;
+    m_inventaire = new Inventaire();
     m_arme = new Arme();
     m_outil = new Outil();
 }
@@ -14,6 +15,7 @@ Joueur::Joueur() : Personnage()
 Joueur::Joueur(int vie) : Personnage(vie)
 {
     m_faim = 100;
+    m_inventaire = new Inventaire();
     m_arme = new Arme();
     m_outil = new Outil();
 }
@@ -23,6 +25,7 @@ Joueur::Joueur(string nomPerso, int vie) : Personnage(nomPerso, vie)
     m_nom = nomPerso;
     m_vie = vie;
     m_faim = 100;
+    m_inventaire = new Inventaire();
     m_arme = new Arme();
     m_outil = new Outil();
 }
@@ -33,6 +36,7 @@ Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, e
     m_vie = vie;
     m_endurance = endu;
     m_faim = 100;
+    m_inventaire = new Inventaire();
     m_arme = new Arme();
     m_outil = new Outil();
 }
@@ -43,29 +47,41 @@ Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage(nomPer
     m_vie = vie;
     m_endurance = endu;
     m_faim = faim;
+    m_inventaire = new Inventaire();
     m_arme = new Arme();
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i) : Personnage(nomPerso, vie, endu)
 {
     m_nom = nomPerso;
     m_vie = vie;
     m_endurance = endu;
     m_faim = faim;
+    m_inventaire = new Inventaire(i);
+    m_arme = new Arme();
+    m_outil = new Outil();
+}
+
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a) : Personnage(nomPerso, vie, endu)
+{
+    m_faim = faim;
+    m_inventaire = new Inventaire(i);
     m_arme = new Arme(a);
     m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Arme &a, Outil &o) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a, Outil &o) : Personnage(nomPerso, vie, endu)
 {
     m_faim = faim;
+    m_inventaire = new Inventaire(i);
     m_arme = new Arme(a);
     m_outil = new Outil(o);
 }
 
 Joueur::~Joueur()
 {
+    delete(m_inventaire);
     delete(m_arme);
     delete(m_outil);
 }
@@ -73,6 +89,7 @@ Joueur::~Joueur()
 Joueur::Joueur(const Joueur& other) : Personnage(other)
 {
     m_faim = other.m_faim;
+    m_inventaire = new Inventaire(*(other.m_inventaire));
     m_arme = new Arme(*(other.m_arme));
     m_outil = new Outil(*(other.m_outil));
 }
@@ -86,9 +103,11 @@ Joueur& Joueur::operator=(const Joueur& rhs)
         mg = this;
         md = &rhs;
         (*mg) = (*md);
+        delete(m_inventaire);
         delete(m_arme);
         delete(m_outil);
         m_faim = rhs.m_faim;
+        m_inventaire = new Inventaire(*(rhs.m_inventaire));
         m_arme = new Arme(*(rhs.m_arme));
         m_outil = new Outil(*(rhs.m_outil));
     }
@@ -102,6 +121,12 @@ void Joueur::affiche()
     m_arme->affiche();
     m_outil->affiche();
     cout << "Je suis le personnage du joueur." << endl;
+}
+
+void Joueur::afficheInventaire()
+{
+    cout << "Inventaire : " << endl;
+    m_inventaire->affiche();
 }
 
 void Joueur::changerArme(Arme &a)
