@@ -34,8 +34,6 @@ int main()
 
     Ennemi e1("Tafiole", 50, 50, a3);
 
-
-
     cout << endl;
     j.affiche();
     cout << endl << endl;

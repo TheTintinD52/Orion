@@ -71,9 +71,9 @@ void Inventaire::init(Item &obj)
             j++;
         }
         else if (m_tab[i].Getid() == 0 && j == 1)
-        {}
-        else
-            cout << "Inventaire plein !" << endl;
+        {
+
+        }
     }
 }
 

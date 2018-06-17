@@ -98,8 +98,8 @@ Joueur& Joueur::operator=(const Joueur& rhs)
 {
     if (this != &rhs)
     {
-        Joueur *mg;
-        const Joueur *md;
+        Personnage *mg;
+        const Personnage *md;
         mg = this;
         md = &rhs;
         (*mg) = (*md);
