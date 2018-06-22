@@ -22,7 +22,7 @@ int main()
     Block b(1, "Pierre", 1.3, c2);
     Item i2(2, "Sucre");
 
-    Inventaire i;
+    Inventaire i(20);
 
     Arme a1(3, "Epee", 25, 256);
     Arme a2(4, "Hache", 40, 1024);

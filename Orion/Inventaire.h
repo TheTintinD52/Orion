@@ -8,6 +8,7 @@ class Inventaire
 {
 public:
     Inventaire();
+    Inventaire(int);
     virtual ~Inventaire();
     Inventaire(const Inventaire&);
     Inventaire& operator=(const Inventaire&);
@@ -18,6 +19,7 @@ public:
     void Jeter(Item &);
 
 protected:
+    int m_nb;
     Item *m_tab;
 };
 

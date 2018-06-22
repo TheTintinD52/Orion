@@ -4,20 +4,29 @@
 
 using namespace std;
 
-Inventaire::Inventaire()
+Inventaire::Inventaire() : m_nb(0), m_tab(NULL)
 {
-    m_tab = new Item[20];
-    for (int i = 0; i<20; i++)
-    {}
+
+}
+
+Inventaire::Inventaire(int nb)
+{
+    m_nb = nb;
+    m_tab = new Item[m_nb];
+    for (int i = 0; i<m_nb; i++)
+    {
+
+    }
 }
 
 Inventaire::~Inventaire()
 {
-    delete[] m_tab;
+    delete(m_tab);
 }
 
 Inventaire::Inventaire(const Inventaire& other)
 {
+    m_nb = other.m_nb;
     m_tab = new Item[20];
     for (int i = 0; i<20; i++)
     {}
@@ -27,7 +36,11 @@ Inventaire& Inventaire::operator=(const Inventaire& rhs)
 {
     if (this != &rhs)
     {
-
+        m_nb = rhs.m_nb;
+        delete(m_tab);
+        m_tab = new Item[m_nb];
+        for (int i = 0; i<m_nb; i++)
+        {}
     }
     return *this;
 }
@@ -37,7 +50,7 @@ void Inventaire::affiche()
 
     int i;
 
-    for (i = 0; i<20; i++)
+    for (i = 0; i<m_nb; i++)
     {
         m_tab[i].affiche();
     }
@@ -61,16 +74,16 @@ void Inventaire::init(int nb)
 
 void Inventaire::init(Item &obj)
 {
-    int j;
+    bool present = false;
 
-    for (int i = 0, j = 0; i<20; i++)
+    for (int i = 0; i<m_nb; i++)
     {
-        if (m_tab[i].Getid() == 0 && j != 1)
+        if (m_tab[i].Getid() == 0 && present != true)
         {
             m_tab[i] = obj;
-            j++;
+            present = true;
         }
-        else if (m_tab[i].Getid() == 0 && j == 1)
+        else
         {
 
         }
@@ -79,7 +92,7 @@ void Inventaire::init(Item &obj)
 
 void Inventaire::Jeter(Item &obj)
 {
-    for (int i = 0; i<20; i++)
+    for (int i = 0; i<m_nb; i++)
     {
         if (m_tab[i] == obj)
         {
