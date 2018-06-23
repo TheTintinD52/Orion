@@ -7,3 +7,4 @@ Mods de Minecraft prévu :
 - Thermal et ses extensions
 - Big Reactor
 - AE2 et ses extensions
+- Ender IO
