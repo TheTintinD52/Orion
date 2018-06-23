@@ -109,7 +109,7 @@
 	"string"
 	"Outillage.h"
 
-1528911638 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\block.cpp
+1529755928 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\block.cpp
 	"string"
 	"iostream"
 	"Block.h"
@@ -156,7 +156,7 @@
 1528912269 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\personnage.h
 	"string"
 
-1529678627 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.cpp
+1529678755 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\inventaire.cpp
 	"Inventaire.h"
 	"iostream"
 	"Item.h"
@@ -181,7 +181,7 @@
 	"Outil.h"
 	"Inventaire.h"
 
-1529678585 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\main.cpp
+1529756532 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\main.cpp
 	"iostream"
 	"string"
 	"Block.h"
@@ -193,6 +193,9 @@
 	"Ennemi.h"
 	"Arme.h"
 	"Outil.h"
+	"Animal.h"
+	"PNJ.h"
+	"Etabli.h"
 
 1528912269 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\personnage.cpp
 	"Personnage.h"
@@ -227,4 +230,12 @@
 
 1528912216 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\pnj.cpp
 	"PNJ.h"
+
+1529756347 source:c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\etabli.cpp
+	"Etabli.h"
+	"string"
+
+1529756245 c:\users\flo-pc\desktop\programmation\00.programme\00.application\01.c++\orion\orion\etabli.h
+	"Block.h"
+	"string"
 

@@ -9,6 +9,9 @@
 #include "Ennemi.h"
 #include "Arme.h"
 #include "Outil.h"
+#include "Animal.h"
+#include "PNJ.h"
+#include "Etabli.h"
 
 using namespace std;
 
@@ -20,6 +23,9 @@ int main()
     Coordonnees c2(-3,4,3);
 
     Block b(1, "Pierre", 1.3, c2);
+    Etabli craft(12, "Etabli", 4.3, c1);
+    craft.affiche();
+
     Item i2(2, "Sucre");
 
     Inventaire i(20);

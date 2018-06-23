@@ -31,7 +31,7 @@ Block::Block(int identifiant, string nom, double velMinage, Coordonnees &c) : m_
 
 Block::~Block()
 {
-    delete (m_position);
+    delete(m_position);
 }
 
 Block::Block(const Block &other)
@@ -49,7 +49,7 @@ Block& Block::operator=(const Block &b)
         m_id = b.m_id;
         m_nom = b.m_nom;
         m_velMinage = b.m_velMinage;
-        delete (m_position);
+        delete(m_position);
         m_position = new Coordonnees(*(b.m_position));
     }
     return *this;
@@ -65,7 +65,7 @@ void Block::affiche()
 
 void Block::deplacer(Coordonnees &e)
 {
-    delete (m_position);
+    delete(m_position);
     m_position = new Coordonnees(e);
 }
 
