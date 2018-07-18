@@ -1,0 +1,16 @@
+#pragma once
+#include "PNJ.h"
+
+class Animal : public PNJ
+{
+public:
+	Animal();
+	virtual ~Animal();
+	Animal(const Animal&);
+	Animal& operator=(const Animal&);
+
+	void affiche();
+
+protected:
+};
+
