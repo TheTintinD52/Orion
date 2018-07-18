@@ -2,7 +2,6 @@
 #define INVENTAIRE_H
 
 #include "Item.h"
-#include "vector"
 
 class Inventaire
 {
