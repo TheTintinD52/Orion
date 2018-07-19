@@ -17,14 +17,14 @@ Animal::Animal(const Animal& other) : PNJ(other)
 
 }
 
-Animal& Animal::operator=(const Animal& rhs)
+Animal& Animal::operator=(const Animal& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		PNJ *mg;
 		const PNJ *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
 	}
 	return *this;

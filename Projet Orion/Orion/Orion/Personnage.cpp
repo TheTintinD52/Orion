@@ -33,13 +33,13 @@ Personnage::Personnage(const Personnage& other) : m_vie(other.m_vie), m_nom(othe
 
 }
 
-Personnage& Personnage::operator=(const Personnage& rhs)
+Personnage& Personnage::operator=(const Personnage& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
-		m_vie = rhs.m_vie;
-		m_nom = rhs.m_nom;
-		m_endurance = rhs.m_endurance;
+		m_vie = other.m_vie;
+		m_nom = other.m_nom;
+		m_endurance = other.m_endurance;
 	}
 	return *this;
 }

@@ -12,16 +12,16 @@ Carre::Carre(double longueur) : m_longueur1(longueur), m_longueur2(longueur), m_
 
 }
 
-Carre::Carre(double longueur, Point &p) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
+Carre::Carre(double longueur, Point &point) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
 {
-	m_M1 = new Point(p);
-	m_M2 = new Point(p);
+	m_M1 = new Point(point);
+	m_M2 = new Point(point);
 }
 
-Carre::Carre(double longueur, Point &p1, Point &p2) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
+Carre::Carre(double longueur, Point &point1, Point &point2) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
 {
-	m_M1 = new Point(p1);
-	m_M2 = new Point(p2);
+	m_M1 = new Point(point1);
+	m_M2 = new Point(point2);
 }
 
 Carre::~Carre()

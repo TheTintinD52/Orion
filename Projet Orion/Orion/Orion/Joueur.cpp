@@ -1,6 +1,6 @@
-#include "Joueur.h"
 #include "iostream"
 #include "string"
+#include "Joueur.h"
 
 using namespace std;
 
@@ -29,22 +29,22 @@ Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage(nomPer
 
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i) : Personnage(nomPerso, vie, endu), m_faim(faim), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &inventory) : Personnage(nomPerso, vie, endu), m_faim(faim), m_arme(NULL), m_outil(NULL)
 {
-	m_inventaire = new Inventaire(i);
+	m_inventaire = new Inventaire(inventory);
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a) : Personnage(nomPerso, vie, endu), m_faim(faim), m_outil(NULL)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &inventory, Arme &arme) : Personnage(nomPerso, vie, endu), m_faim(faim), m_outil(NULL)
 {
-	m_inventaire = new Inventaire(i);
-	m_arme = new Arme(a);
+	m_inventaire = new Inventaire(inventory);
+	m_arme = new Arme(arme);
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a, Outil &o) : Personnage(nomPerso, vie, endu), m_faim(faim)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &inventory, Arme &arme, Outil &outil) : Personnage(nomPerso, vie, endu), m_faim(faim)
 {
-	m_inventaire = new Inventaire(i);
-	m_arme = new Arme(a);
-	m_outil = new Outil(o);
+	m_inventaire = new Inventaire(inventory);
+	m_arme = new Arme(arme);
+	m_outil = new Outil(outil);
 }
 
 Joueur::~Joueur()
@@ -62,22 +62,22 @@ Joueur::Joueur(const Joueur& other) : Personnage(other)
 	m_outil = new Outil(*(other.m_outil));
 }
 
-Joueur& Joueur::operator=(const Joueur& rhs)
+Joueur& Joueur::operator=(const Joueur& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Personnage *mg;
 		const Personnage *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
 		delete(m_inventaire);
 		delete(m_arme);
 		delete(m_outil);
-		m_faim = rhs.m_faim;
-		m_inventaire = new Inventaire(*(rhs.m_inventaire));
-		m_arme = new Arme(*(rhs.m_arme));
-		m_outil = new Outil(*(rhs.m_outil));
+		m_faim = other.m_faim;
+		m_inventaire = new Inventaire(*(other.m_inventaire));
+		m_arme = new Arme(*(other.m_arme));
+		m_outil = new Outil(*(other.m_outil));
 	}
 	return *this;
 }
@@ -99,25 +99,24 @@ void Joueur::affiche()
 
 void Joueur::afficheInventaire()
 {
-	cout << "Inventaire : " << endl;
 	if (m_inventaire != NULL)
 	{
 		m_inventaire->affiche();
 	}
 }
 
-void Joueur::changerArme(Arme &a)
+void Joueur::changerArme(Arme &arme)
 {
 	delete(m_arme);
-	cout << m_nom << " trouve " << a.Getnom() << " et s'en equipe." << endl;
-	m_arme = new Arme(a);
+	cout << m_nom << " trouve " << arme.Getnom() << " et s'en equipe." << endl;
+	m_arme = new Arme(arme);
 }
 
-void Joueur::changerOutil(Outil &o)
+void Joueur::changerOutil(Outil &outil)
 {
 	delete(m_outil);
-	cout << m_nom << " trouve " << o.Getnom() << " et s'en equipe." << endl;
-	m_outil = new Outil(o);
+	cout << m_nom << " trouve " << outil.Getnom() << " et s'en equipe." << endl;
+	m_outil = new Outil(outil);
 }
 
 void Joueur::attaquer(Personnage &cible)
@@ -130,14 +129,14 @@ void Joueur::attaquer(Personnage &cible)
 		cible.recevoirDegats(5);
 }
 
-void Joueur::prendreItem(Objet &i)
+void Joueur::prendreItem(Objet &item)
 {
-	m_inventaire->init(i);
+	m_inventaire->init(item);
 }
 
-void Joueur::jeterItem(Objet &i)
+void Joueur::jeterItem(Objet &item)
 {
-	m_inventaire->Jeter(i);
+	m_inventaire->Jeter(item);
 }
 
 void Joueur::boirePotionDeVie(int qtVie)

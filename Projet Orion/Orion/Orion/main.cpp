@@ -18,11 +18,16 @@ using namespace std;
 
 int main()
 {
+	Point p1(2, 3);
+	Point p2(1.3, 2.7);
+
+	Carre carre1(2.3, p1, p2);
+
 	Coordonnees c1(1, 2, 3);
 	Coordonnees c2(-3, 4, 3);
 
-	Block b(1, "Pierre", 1.3, c2);
-	Etabli craft(12, "Etabli", 4.3, c1);
+	Block b(1, "Pierre", 1.3, carre1);
+	Etabli craft(12, "Etabli", 4.3);
 	craft.affiche();
 
 	Objet i2(2, "Sucre");
@@ -55,17 +60,6 @@ int main()
 	j.prendreItem(i2);
 	j.prendreItem(a1);
 	j.afficheInventaire();
-
-	cout << endl;
-	Point p1(2, 3);
-	Point p2(1.3, 2.7);
-	p1.affiche();
-	cout << endl;
-	p2.affiche();
-
-	cout << endl;
-	Carre c(2.3, p1, p2);
-	c.affiche();
 
 	system("PAUSE");
 	return 0;

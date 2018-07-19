@@ -40,9 +40,9 @@ Objet&  Objet::operator=(const Objet& other)
 	return *this;
 }
 
-bool Objet::operator==(const Objet &i)
+bool Objet::operator==(const Objet &item)
 {
-	if (m_nom == i.m_nom && m_id == i.m_id)
+	if (m_nom == item.m_nom && m_id == item.m_id)
 	{
 		return true;
 	}

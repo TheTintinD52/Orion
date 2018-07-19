@@ -12,7 +12,7 @@ Point::Point() : m_x(0), m_y(0)
 
 }
 
-Point::Point(double p) : m_x(p), m_y(p)
+Point::Point(double nb) : m_x(nb), m_y(nb)
 {
 
 }
@@ -22,7 +22,7 @@ Point::Point(double x, double y) : m_x(x), m_y(y)
 
 }
 
-Point::Point(const Point &p) : m_x(p.m_x), m_y(p.m_y)
+Point::Point(const Point &point) : m_x(point.m_x), m_y(point.m_y)
 {
 
 }
@@ -79,18 +79,18 @@ void Point::initialise(double px, double py)
 
 //operator overloading
 
-ostream& operator<<(ostream &os, Point &p)
+ostream& operator<<(ostream &os, Point &point)
 {
-	os << "x = " << p.m_x << endl << "y = " << p.m_y << endl;
+	os << "x = " << point.m_x << endl << "y = " << point.m_y << endl;
 	return os;
 }
 
-Point& Point::operator=(const Point &p)
+Point& Point::operator=(const Point &point)
 {
-	if (this != &p)
+	if (this != &point)
 	{
-		m_x = p.m_x;
-		m_y = p.m_y;
+		m_x = point.m_x;
+		m_y = point.m_y;
 	}
 	return *this;
 }

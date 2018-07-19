@@ -1,6 +1,6 @@
-#include "Inventaire.h"
 #include "iostream"
 #include "Objet.h"
+#include "Inventaire.h"
 
 using namespace std;
 
@@ -31,11 +31,11 @@ Inventaire::Inventaire(const Inventaire& other) : m_nb(other.m_nb)
 	}
 }
 
-Inventaire& Inventaire::operator=(const Inventaire& rhs)
+Inventaire& Inventaire::operator=(const Inventaire& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
-		m_nb = rhs.m_nb;
+		m_nb = other.m_nb;
 		delete(m_tab);
 		m_tab = new Objet[m_nb];
 		for (int i = 0; i<m_nb; i++)
@@ -51,9 +51,17 @@ void Inventaire::affiche()
 
 	if (m_tab != NULL)
 	{
-		for (i = 0; i<m_nb; i++)
+		cout << "Inventaire : " << endl;
+		for (i = 0; i < m_nb; i++)
 		{
-			m_tab[i].affiche();
+			if (m_tab[i].Getid() == 0)
+			{
+				
+			}
+			else
+			{
+				m_tab[i].affiche();
+			}
 		}
 	}
 }
@@ -74,7 +82,7 @@ void Inventaire::init(int nb)
 	}
 }
 
-void Inventaire::init(Objet &obj)
+void Inventaire::init(Objet &item)
 {
 	bool present = false;
 
@@ -82,7 +90,7 @@ void Inventaire::init(Objet &obj)
 	{
 		if (m_tab[i].Getid() == 0 && present != true)
 		{
-			m_tab[i] = obj;
+			m_tab[i] = item;
 			present = true;
 		}
 		else
@@ -92,11 +100,11 @@ void Inventaire::init(Objet &obj)
 	}
 }
 
-void Inventaire::Jeter(Objet &obj)
+void Inventaire::Jeter(Objet &item)
 {
 	for (int i = 0; i<m_nb; i++)
 	{
-		if (m_tab[i] == obj)
+		if (m_tab[i] == item)
 		{
 			m_tab[i].Setid(0);
 			m_tab[i].Setnom("None");

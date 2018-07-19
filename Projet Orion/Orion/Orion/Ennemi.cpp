@@ -24,9 +24,9 @@ Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, e
 
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &a) : Personnage(nomPerso, vie, endu)
+Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &arme) : Personnage(nomPerso, vie, endu)
 {
-	m_arme = new Arme(a);
+	m_arme = new Arme(arme);
 }
 
 Ennemi::~Ennemi()
@@ -39,17 +39,17 @@ Ennemi::Ennemi(const Ennemi& other) : Personnage(other)
 	m_arme = new Arme(*(other.m_arme));
 }
 
-Ennemi& Ennemi::operator=(const Ennemi& rhs)
+Ennemi& Ennemi::operator=(const Ennemi& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Personnage *mg;
 		const Personnage *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
 		delete(m_arme);
-		m_arme = new Arme(*(rhs.m_arme));
+		m_arme = new Arme(*(other.m_arme));
 	}
 	return *this;
 }

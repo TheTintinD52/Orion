@@ -39,16 +39,16 @@ Arme::Arme(const Arme& other) : Outillage(other), m_degat(other.m_degat)
 
 }
 
-Arme& Arme::operator=(const Arme& rhs)
+Arme& Arme::operator=(const Arme& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Outillage *mg;
 		const Outillage *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
-		m_degat = rhs.m_degat;
+		m_degat = other.m_degat;
 	}
 	return *this;
 }

@@ -33,16 +33,16 @@ Outillage::Outillage(const Outillage& other) : Objet(other), m_dura(other.m_dura
 
 }
 
-Outillage& Outillage::operator=(const Outillage& rhs)
+Outillage& Outillage::operator=(const Outillage& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Objet *mg;
 		const Objet *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
-		m_dura = rhs.m_dura;
+		m_dura = other.m_dura;
 	}
 	return *this;
 }

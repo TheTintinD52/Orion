@@ -35,13 +35,13 @@ Coordonnees::Coordonnees(const Coordonnees& other)
 	m_z = other.m_z;
 }
 
-Coordonnees& Coordonnees::operator=(const Coordonnees& rhs)
+Coordonnees& Coordonnees::operator=(const Coordonnees& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
-		m_x = rhs.m_x;
-		m_y = rhs.m_y;
-		m_z = rhs.m_z;
+		m_x = other.m_x;
+		m_y = other.m_y;
+		m_z = other.m_z;
 	}
 	return *this;
 }

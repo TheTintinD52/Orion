@@ -34,14 +34,14 @@ Outil::Outil(const Outil& other) : Outillage(other)
 
 }
 
-Outil& Outil::operator=(const Outil& rhs)
+Outil& Outil::operator=(const Outil& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Outillage *mg;
 		const Outillage *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
 	}
 	return *this;

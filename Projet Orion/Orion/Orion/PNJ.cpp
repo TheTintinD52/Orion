@@ -17,14 +17,14 @@ PNJ::PNJ(const PNJ& other) : Personnage(other)
 
 }
 
-PNJ& PNJ::operator=(const PNJ& rhs)
+PNJ& PNJ::operator=(const PNJ& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Personnage *mg;
 		const Personnage *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
 	}
 	return *this;

@@ -23,7 +23,12 @@ Etabli::Etabli(int id, string nom, double velMinage) : Block(id, nom, velMinage)
 
 }
 
-Etabli::Etabli(int id, string nom, double velMinage, Coordonnees &c) : Block(id, nom, velMinage, c)
+Etabli::Etabli(int id, string nom, double velMinage, Carre &carre) : Block(id, nom, velMinage, carre)
+{
+
+}
+
+Etabli::Etabli(int id, string nom, double velMinage, Carre &carre, Coordonnees &coordonnees) : Block(id, nom, velMinage, carre, coordonnees)
 {
 
 }
@@ -38,14 +43,14 @@ Etabli::Etabli(const Etabli& other) : Block(other)
 
 }
 
-Etabli& Etabli::operator=(const Etabli& rhs)
+Etabli& Etabli::operator=(const Etabli& other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		Block *mg;
 		const Block *md;
 		mg = this;
-		md = &rhs;
+		md = &other;
 		(*mg) = (*md);
 	}
 	return *this;
