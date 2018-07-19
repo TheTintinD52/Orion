@@ -60,7 +60,10 @@ void Block::affiche()
 {
 	Objet::affiche();
 	cout << "Vitesse de minage : " << m_velMinage << endl;
-	m_position->affiche();
+	if (m_position != NULL)
+	{
+		m_position->affiche();
+	}
 }
 
 void Block::deplacer(Coordonnees &e)

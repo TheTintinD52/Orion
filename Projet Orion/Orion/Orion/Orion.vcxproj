@@ -118,6 +118,7 @@
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="Arme.cpp" />
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Carre.cpp" />
     <ClCompile Include="Coordonnees.cpp" />
     <ClCompile Include="Ennemi.cpp" />
     <ClCompile Include="Etabli.cpp" />
@@ -129,11 +130,13 @@
     <ClCompile Include="Outillage.cpp" />
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="PNJ.cpp" />
+    <ClCompile Include="Point.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Arme.h" />
     <ClInclude Include="Block.h" />
+    <ClInclude Include="Carre.h" />
     <ClInclude Include="Coordonnees.h" />
     <ClInclude Include="Ennemi.h" />
     <ClInclude Include="Etabli.h" />
@@ -144,6 +147,7 @@
     <ClInclude Include="Outillage.h" />
     <ClInclude Include="Personnage.h" />
     <ClInclude Include="PNJ.h" />
+    <ClInclude Include="Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

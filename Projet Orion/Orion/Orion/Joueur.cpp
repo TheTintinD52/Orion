@@ -4,76 +4,44 @@
 
 using namespace std;
 
-Joueur::Joueur() : Personnage()
+Joueur::Joueur() : Personnage(), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
-	m_faim = 100;
-	m_inventaire = new Inventaire();
-	m_arme = new Arme();
-	m_outil = new Outil();
+
 }
 
-Joueur::Joueur(int vie) : Personnage(vie)
+Joueur::Joueur(int vie) : Personnage(vie), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
-	m_faim = 100;
-	m_inventaire = new Inventaire();
-	m_arme = new Arme();
-	m_outil = new Outil();
+
 }
 
-Joueur::Joueur(string nomPerso, int vie) : Personnage(nomPerso, vie)
+Joueur::Joueur(string nomPerso, int vie) : Personnage(nomPerso, vie), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
-	m_nom = nomPerso;
-	m_vie = vie;
-	m_faim = 100;
-	m_inventaire = new Inventaire();
-	m_arme = new Arme();
-	m_outil = new Outil();
+
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
-	m_nom = nomPerso;
-	m_vie = vie;
-	m_endurance = endu;
-	m_faim = 100;
-	m_inventaire = new Inventaire();
-	m_arme = new Arme();
-	m_outil = new Outil();
+
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Personnage(nomPerso, vie, endu), m_faim(faim), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
-	m_nom = nomPerso;
-	m_vie = vie;
-	m_endurance = endu;
-	m_faim = faim;
-	m_inventaire = new Inventaire();
-	m_arme = new Arme();
-	m_outil = new Outil();
+
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i) : Personnage(nomPerso, vie, endu), m_faim(faim), m_arme(NULL), m_outil(NULL)
 {
-	m_nom = nomPerso;
-	m_vie = vie;
-	m_endurance = endu;
-	m_faim = faim;
 	m_inventaire = new Inventaire(i);
-	m_arme = new Arme();
-	m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a) : Personnage(nomPerso, vie, endu), m_faim(faim), m_outil(NULL)
 {
-	m_faim = faim;
 	m_inventaire = new Inventaire(i);
 	m_arme = new Arme(a);
-	m_outil = new Outil();
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a, Outil &o) : Personnage(nomPerso, vie, endu)
+Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &i, Arme &a, Outil &o) : Personnage(nomPerso, vie, endu), m_faim(faim)
 {
-	m_faim = faim;
 	m_inventaire = new Inventaire(i);
 	m_arme = new Arme(a);
 	m_outil = new Outil(o);
@@ -118,15 +86,24 @@ void Joueur::affiche()
 {
 	Personnage::affiche();
 	cout << "Faim max : " << m_faim << endl;
-	m_arme->affiche();
-	m_outil->affiche();
+	if (m_arme != NULL)
+	{
+		m_arme->affiche();
+	}
+	if (m_outil != NULL)
+	{
+		m_outil->affiche();
+	}
 	cout << "Je suis le personnage du joueur." << endl;
 }
 
 void Joueur::afficheInventaire()
 {
 	cout << "Inventaire : " << endl;
-	m_inventaire->affiche();
+	if (m_inventaire != NULL)
+	{
+		m_inventaire->affiche();
+	}
 }
 
 void Joueur::changerArme(Arme &a)

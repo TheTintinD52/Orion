@@ -1,5 +1,7 @@
 #include "iostream"
 #include "string"
+#include "Point.h"
+#include "Carre.h"
 #include "Coordonnees.h"
 #include "Objet.h"
 #include "Block.h"
@@ -54,8 +56,16 @@ int main()
 	j.prendreItem(a1);
 	j.afficheInventaire();
 
-	Objet ob;
-	ob.affiche();
+	cout << endl;
+	Point p1(2, 3);
+	Point p2(1.3, 2.7);
+	p1.affiche();
+	cout << endl;
+	p2.affiche();
+
+	cout << endl;
+	Carre c(2.3, p1, p2);
+	c.affiche();
 
 	system("PAUSE");
 	return 0;

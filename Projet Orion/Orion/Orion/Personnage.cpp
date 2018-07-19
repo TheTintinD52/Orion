@@ -28,11 +28,9 @@ Personnage::~Personnage()
 
 }
 
-Personnage::Personnage(const Personnage& other)
+Personnage::Personnage(const Personnage& other) : m_vie(other.m_vie), m_nom(other.m_nom), m_endurance(other.m_endurance)
 {
-	m_vie = other.m_vie;
-	m_nom = other.m_nom;
-	m_endurance = other.m_endurance;
+
 }
 
 Personnage& Personnage::operator=(const Personnage& rhs)

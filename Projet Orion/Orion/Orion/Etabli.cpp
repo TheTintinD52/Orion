@@ -50,3 +50,8 @@ Etabli& Etabli::operator=(const Etabli& rhs)
 	}
 	return *this;
 }
+
+void Etabli::affiche()
+{
+	Block::affiche();
+}

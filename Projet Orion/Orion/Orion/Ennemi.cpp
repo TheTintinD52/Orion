@@ -4,24 +4,24 @@
 
 using namespace std;
 
-Ennemi::Ennemi() : Personnage()
+Ennemi::Ennemi() : Personnage(), m_arme(NULL)
 {
-	m_arme = new Arme();
+
 }
 
-Ennemi::Ennemi(int vie) : Personnage(vie)
+Ennemi::Ennemi(int vie) : Personnage(vie), m_arme(NULL)
 {
-	m_arme = new Arme();
+
 }
 
-Ennemi::Ennemi(string nomPerso, int vie) : Personnage(nomPerso, vie)
+Ennemi::Ennemi(string nomPerso, int vie) : Personnage(nomPerso, vie), m_arme(NULL)
 {
-	m_arme = new Arme();
+
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu)
+Ennemi::Ennemi(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu), m_arme(NULL)
 {
-	m_arme = new Arme();
+
 }
 
 Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &a) : Personnage(nomPerso, vie, endu)
@@ -57,7 +57,10 @@ Ennemi& Ennemi::operator=(const Ennemi& rhs)
 void Ennemi::affiche()
 {
 	Personnage::affiche();
-	m_arme->affiche();
+	if (m_arme != NULL)
+	{
+		m_arme->affiche();
+	}
 	cout << "Je suis un ennemi." << endl;
 }
 

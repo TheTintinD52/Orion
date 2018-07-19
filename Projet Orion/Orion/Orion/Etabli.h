@@ -13,6 +13,6 @@ public:
 	virtual ~Etabli();
 	Etabli(const Etabli&);
 	Etabli& operator=(const Etabli&);
-
-protected:
+	
+	void affiche();
 };

@@ -9,21 +9,22 @@ Inventaire::Inventaire() : m_nb(0), m_tab(NULL)
 
 }
 
-Inventaire::Inventaire(int nb)
+Inventaire::Inventaire(int nb) : m_nb(nb)
 {
-	m_nb = nb;
 	m_tab = new Objet[m_nb];
-	for (int i = 0; i < m_nb; i++);
+	for (int i = 0; i < m_nb; i++)
+	{
+
+	}
 }
 
 Inventaire::~Inventaire()
 {
-	//delete(m_tab); ?????????????????????
+	// delete(m_tab); ???????????????????????????
 }
 
-Inventaire::Inventaire(const Inventaire& other)
+Inventaire::Inventaire(const Inventaire& other) : m_nb(other.m_nb)
 {
-	m_nb = other.m_nb;
 	m_tab = new Objet[20];
 	for (int i = 0; i<20; i++)
 	{
@@ -48,9 +49,12 @@ void Inventaire::affiche()
 {
 	int i;
 
-	for (i = 0; i<m_nb; i++)
+	if (m_tab != NULL)
 	{
-		m_tab[i].affiche();
+		for (i = 0; i<m_nb; i++)
+		{
+			m_tab[i].affiche();
+		}
 	}
 }
 
