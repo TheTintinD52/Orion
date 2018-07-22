@@ -54,7 +54,7 @@ Ennemi& Ennemi::operator=(const Ennemi& other)
 	return *this;
 }
 
-void Ennemi::affiche()
+void Ennemi::affiche() const
 {
 	Personnage::affiche();
 	if (m_arme != NULL)

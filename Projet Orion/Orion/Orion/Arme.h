@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ARME_H
+#define ARME_H
+
 #include "string"
 #include "Outillage.h"
 
@@ -14,18 +16,13 @@ public:
 	Arme(const Arme& other);
 	Arme& operator=(const Arme& other);
 
-	void affiche();
+	void affiche() const;
 
-	int Getdegat()
-	{
-		return m_degat;
-	}
-	void Setdegat(int val)
-	{
-		m_degat = val;
-	}
+	int Getdegat() const;
+	void Setdegat(int);
 
 protected:
 	int m_degat;
 };
 
+#endif

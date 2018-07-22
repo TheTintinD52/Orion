@@ -96,7 +96,7 @@ Block& Block::operator=(const Block &other)
 	return *this;
 }
 
-void Block::affiche()
+void Block::affiche() const
 {
 	Objet::affiche();
 	cout << "Vitesse de minage : " << m_velMinage << endl;
@@ -112,3 +112,12 @@ void Block::deplacer(Coordonnees &coordonnees)
 	m_position = new Coordonnees(coordonnees);
 }
 
+double Block::GetvelMinage() const
+{
+	return m_velMinage;
+}
+
+void Block::SetvelMinage(double val)
+{
+	m_velMinage = val;
+}

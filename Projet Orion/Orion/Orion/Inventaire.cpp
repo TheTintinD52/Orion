@@ -45,7 +45,7 @@ Inventaire& Inventaire::operator=(const Inventaire& other)
 	return *this;
 }
 
-void Inventaire::affiche()
+void Inventaire::affiche() const
 {
 	int i;
 
@@ -110,4 +110,14 @@ void Inventaire::Jeter(Objet &item)
 			m_tab[i].Setnom("None");
 		}
 	}
+}
+
+int Inventaire::Getnb() const
+{
+	return m_nb;
+}
+
+void Inventaire::Setnb(int nb)
+{
+	m_nb = nb;
 }

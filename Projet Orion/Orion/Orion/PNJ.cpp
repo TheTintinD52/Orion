@@ -30,7 +30,7 @@ PNJ& PNJ::operator=(const PNJ& other)
 	return *this;
 }
 
-void PNJ::affiche()
+void PNJ::affiche() const
 {
 	Personnage::affiche();
 }

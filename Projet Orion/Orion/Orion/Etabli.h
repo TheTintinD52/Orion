@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ETABLI_H
+#define ETABLI_H
+
 #include "Block.h"
 #include "string"
 
@@ -15,5 +17,7 @@ public:
 	Etabli(const Etabli&);
 	Etabli& operator=(const Etabli&);
 	
-	void affiche();
+	void affiche() const;
 };
+
+#endif

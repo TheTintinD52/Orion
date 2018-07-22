@@ -1,4 +1,6 @@
-#pragma once
+#ifndef JOUEUR_H
+#define JOUEUR_H
+
 #include "Personnage.h"
 #include "Arme.h"
 #include "Outil.h"
@@ -20,8 +22,8 @@ public:
 	Joueur(const Joueur&);
 	Joueur& operator=(const Joueur&);
 
-	void affiche();
-	void afficheInventaire();
+	void affiche() const;
+	void afficheInventaire() const;
 	void changerArme(Arme &);
 	void changerOutil(Outil &);
 	void attaquer(Personnage &);
@@ -29,14 +31,8 @@ public:
 	void jeterItem(Objet &);
 	void boirePotionDeVie(int);
 
-	int Getfaim()
-	{
-		return m_faim;
-	}
-	void Setfaim(int val)
-	{
-		m_faim = val;
-	}
+	int Getfaim() const;
+	void Setfaim(int);
 
 protected:
 	int m_faim;
@@ -45,3 +41,4 @@ protected:
 	Outil *m_outil;
 };
 
+#endif

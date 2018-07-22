@@ -30,7 +30,7 @@ Animal& Animal::operator=(const Animal& other)
 	return *this;
 }
 
-void Animal::affiche()
+void Animal::affiche() const
 {
 	PNJ::affiche();
 }

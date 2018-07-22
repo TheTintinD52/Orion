@@ -1,4 +1,6 @@
-#pragma once
+#ifndef OUTIL_H
+#define OUTIL_H
+
 #include "Outillage.h"
 #include "iostream"
 
@@ -14,7 +16,6 @@ public:
 	Outil& operator=(const Outil&);
 
 	void affiche();
-
-protected:
 };
 
+#endif

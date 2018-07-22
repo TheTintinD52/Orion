@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ENNEMI_H
+#define ENNEMI_H
+
 #include "Personnage.h"
 #include "string"
 #include "Arme.h"
@@ -16,10 +18,11 @@ public:
 	Ennemi(const Ennemi& other);
 	Ennemi& operator=(const Ennemi& other);
 
-	void affiche();
+	void affiche() const;
 	void boirePotionDeVie(int);
 
 protected:
 	Arme * m_arme;
 };
 
+#endif

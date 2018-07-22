@@ -1,4 +1,6 @@
-#pragma once
+#ifndef OUTILLAGE_H
+#define OUTILLAGE_H
+
 #include "string"
 #include "Objet.h"
 
@@ -13,18 +15,13 @@ public:
 	Outillage(const Outillage&);
 	Outillage& operator=(const Outillage&);
 
-	void affiche();
+	void affiche() const;
 
-	int Getdura()
-	{
-		return m_dura;
-	}
-	void Setdura(int val)
-	{
-		m_dura = val;
-	}
+	int Getdura() const;
+	void Setdura(int);
 
 protected:
 	int m_dura;
 };
 
+#endif

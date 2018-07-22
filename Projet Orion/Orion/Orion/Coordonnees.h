@@ -1,4 +1,6 @@
-#pragma once
+#ifndef COORDONNEES_H
+#define COORDONNEES_H
+
 class Coordonnees
 {
 public:
@@ -10,32 +12,14 @@ public:
 	Coordonnees(const Coordonnees&);
 	Coordonnees& operator=(const Coordonnees&);
 
-	void affiche();
+	void affiche() const;
 
-	int Getx()
-	{
-		return m_x;
-	}
-	void Setx(int val)
-	{
-		m_x = val;
-	}
-	int Gety()
-	{
-		return m_y;
-	}
-	void Sety(int val)
-	{
-		m_y = val;
-	}
-	int Getz()
-	{
-		return m_z;
-	}
-	void Setz(int val)
-	{
-		m_z = val;
-	}
+	int Getx() const;
+	void Setx(int);
+	int Gety() const;
+	void Sety(int);
+	int Getz() const;
+	void Setz(int);
 
 protected:
 	int m_x;
@@ -43,3 +27,4 @@ protected:
 	int m_z;
 };
 
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef OBJET_H
+#define OBJET_H
 
 #include "string"
 
@@ -14,7 +15,7 @@ public:
 
 	bool operator==(const Objet&);
 
-	void affiche();
+	void affiche() const;
 	void init();
 
 	int Getid()
@@ -39,3 +40,4 @@ protected :
 	std::string m_nom;
 };
 
+#endif

@@ -53,9 +53,19 @@ Arme& Arme::operator=(const Arme& other)
 	return *this;
 }
 
-void Arme::affiche()
+void Arme::affiche() const
 {
 	cout << "Arme : " << endl;
 	Outillage::affiche();
 	cout << "Degat arme: " << m_degat << endl;
+}
+
+int Arme::Getdegat() const
+{
+	return m_degat;
+}
+
+void Arme::Setdegat(int degat)
+{
+	m_degat = degat;
 }

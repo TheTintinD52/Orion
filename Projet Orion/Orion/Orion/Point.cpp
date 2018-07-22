@@ -44,7 +44,7 @@ void Point::majcart()
 	m_y = m_r * sin(m_t);
 }
 
-void Point::affiche()
+void Point::affiche() const
 {
 	cout << "x = " << m_x << endl << "y = " << m_y << endl;
 }
@@ -138,4 +138,44 @@ Point operator*(Point const &a, Point const &b)
 	Point copie(a);
 	copie *= b;
 	return copie;
+}
+
+double Point::Getx() const
+{
+	return m_x;
+}
+
+void Point::Setx(double val)
+{
+	m_x = val;
+}
+
+double Point::Gety() const
+{
+	return m_y;
+}
+
+void Point::Sety(double val)
+{
+	m_y = val;
+}
+
+double Point::Getr() const
+{
+	return m_r;
+}
+
+void Point::Setr(double val)
+{
+	m_r = val;
+}
+
+double Point::Gett() const
+{
+	return m_t;
+}
+
+void Point::Sett(double val)
+{
+	m_t = val;
 }

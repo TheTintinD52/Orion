@@ -44,7 +44,7 @@ Personnage& Personnage::operator=(const Personnage& other)
 	return *this;
 }
 
-void Personnage::affiche()
+void Personnage::affiche() const
 {
 	cout << "Nom : " << m_nom << endl;
 	cout << "Vie : " << m_vie << endl;
@@ -59,4 +59,34 @@ void Personnage::recevoirDegats(int nbDegats)
 
 	if (m_vie <= 0)
 		m_vie = 0;
+}
+
+int Personnage::Getvie() const
+{
+	return m_vie;
+}
+
+void Personnage::Setvie(int vie)
+{
+	m_vie = vie;
+}
+
+string Personnage::Getnom() const
+{
+	return m_nom;
+}
+
+void Personnage::Setnom(string nom)
+{
+	m_nom = nom;
+}
+
+int Personnage::Getendurance() const
+{
+	return m_endurance;
+}
+
+void Personnage::Setendurance(int endurance)
+{
+	m_endurance = endurance;
 }

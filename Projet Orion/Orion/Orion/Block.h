@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BLOCK_H
+#define BLOCK_H
 
 #include "string"
 #include "Carre.h"
@@ -19,21 +20,11 @@ public:
 
 	Block& operator=(const Block&);
 
-	void affiche();
+	void affiche() const;
 	void deplacer(Coordonnees&);
 
-	double GetvelMinage()
-	{
-		return m_velMinage;
-	}
-	void SetvelMinage(double val)
-	{
-		m_velMinage = val;
-	}
-	Coordonnees Getposition()
-	{
-		return *m_position;
-	}
+	double GetvelMinage() const;
+	void SetvelMinage(double val);
 
 protected:
 	double m_velMinage;
@@ -41,3 +32,4 @@ protected:
 	Coordonnees *m_position;
 };
 
+#endif

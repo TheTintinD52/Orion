@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PNJ_H
+#define PNJ_H
+
 #include "Personnage.h"
 
 class PNJ : public Personnage
@@ -9,8 +11,7 @@ public:
 	PNJ(const PNJ&);
 	PNJ& operator=(const PNJ&);
 
-	void affiche();
-
-protected:
+	void affiche() const;
 };
 
+#endif

@@ -56,7 +56,7 @@ Carre& Carre::operator=(const Carre &carre)
 	return *this;
 }
 
-void Carre::affiche()
+void Carre::affiche() const
 {
 	cout << "Les longueurs du carre sont de " << m_longueur1 << " " << m_longueur2 << " " << m_longueur3 << " " << m_longueur4 << endl;
 	if (m_M1 != NULL)
@@ -67,4 +67,17 @@ void Carre::affiche()
 	{
 		m_M2->affiche();
 	}
+}
+
+double Carre::Getlongueur() const
+{
+	return m_longueur1;
+}
+
+void Carre::Setlongueur(double val)
+{
+	m_longueur1 = val;
+	m_longueur2 = val;
+	m_longueur3 = val;
+	m_longueur4 = val;
 }

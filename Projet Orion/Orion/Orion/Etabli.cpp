@@ -56,7 +56,7 @@ Etabli& Etabli::operator=(const Etabli& other)
 	return *this;
 }
 
-void Etabli::affiche()
+void Etabli::affiche() const
 {
 	Block::affiche();
 }

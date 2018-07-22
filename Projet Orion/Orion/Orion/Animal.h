@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ANIMAL_H
+#define ANIMAL_H
+
 #include "PNJ.h"
 
 class Animal : public PNJ
@@ -9,8 +11,7 @@ public:
 	Animal(const Animal&);
 	Animal& operator=(const Animal&);
 
-	void affiche();
-
-protected:
+	void affiche() const;
 };
 
+#endif

@@ -50,7 +50,7 @@ bool Objet::operator==(const Objet &item)
 		return false;
 }
 
-void Objet::affiche()
+void Objet::affiche() const
 {
 	cout << "L'id de l'objet est de " << m_id << " et son nom est de " << m_nom << "." << endl;
 }

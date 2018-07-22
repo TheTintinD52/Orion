@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CARRE_H
+#define CARRE_H
 
 #include "Point.h"
 
@@ -13,19 +14,10 @@ public:
 	Carre(const Carre &);
 	Carre& operator=(const Carre &);
 
-	void affiche();
+	void affiche() const;
 
-	double Getlongueur()
-	{
-		return m_longueur1;
-	}
-	void Setlongueur(double val)
-	{
-		m_longueur1 = val;
-		m_longueur2 = val;
-		m_longueur3 = val;
-		m_longueur4 = val;
-	}
+	double Getlongueur() const;
+	void Setlongueur(double);
 
 protected :
 	double m_longueur1, m_longueur2, m_longueur3, m_longueur4;
@@ -33,3 +25,4 @@ protected :
 	Point *m_M2;
 };
 
+#endif

@@ -82,7 +82,7 @@ Joueur& Joueur::operator=(const Joueur& other)
 	return *this;
 }
 
-void Joueur::affiche()
+void Joueur::affiche() const
 {
 	Personnage::affiche();
 	cout << "Faim max : " << m_faim << endl;
@@ -97,7 +97,7 @@ void Joueur::affiche()
 	cout << "Je suis le personnage du joueur." << endl;
 }
 
-void Joueur::afficheInventaire()
+void Joueur::afficheInventaire() const
 {
 	if (m_inventaire != NULL)
 	{
@@ -146,4 +146,13 @@ void Joueur::boirePotionDeVie(int qtVie)
 
 	if (m_vie > 100)
 		m_vie = 100;
+}
+
+int Joueur::Getfaim() const
+{
+	return m_faim;
+}
+void Joueur::Setfaim(int faim)
+{
+	m_faim = faim;
 }

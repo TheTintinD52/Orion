@@ -47,8 +47,18 @@ Outillage& Outillage::operator=(const Outillage& other)
 	return *this;
 }
 
-void Outillage::affiche()
+void Outillage::affiche() const
 {
 	Objet::affiche();
 	cout << "Durabilite outil : " << m_dura << endl;
+}
+
+int Outillage::Getdura() const
+{
+	return m_dura;
+}
+
+void Outillage::Setdura(int dura)
+{
+	m_dura = dura;
 }
