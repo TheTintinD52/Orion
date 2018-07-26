@@ -4,31 +4,24 @@
 
 using namespace std;
 
-Inventaire::Inventaire() : m_nb(0), m_tab(NULL)
+Inventaire::Inventaire() : m_nb(0)
 {
-
+	m_tab.clear();
 }
 
-Inventaire::Inventaire(int nb) : m_nb(nb)
+Inventaire::Inventaire(size_t nb) : m_nb(nb)
 {
-	m_tab = new Objet[m_nb];
-	for (int i = 0; i < m_nb; i++)
-	{
-
-	}
+	m_tab.resize(m_nb);
 }
 
 Inventaire::~Inventaire()
 {
-	// delete(m_tab); ???????????????????????????
+
 }
 
 Inventaire::Inventaire(const Inventaire& other) : m_nb(other.m_nb)
 {
-	m_tab = new Objet[20];
-	for (int i = 0; i<20; i++)
-	{
-	}
+	m_tab.resize(m_nb);
 }
 
 Inventaire& Inventaire::operator=(const Inventaire& other)
@@ -36,31 +29,25 @@ Inventaire& Inventaire::operator=(const Inventaire& other)
 	if (this != &other)
 	{
 		m_nb = other.m_nb;
-		delete(m_tab);
-		m_tab = new Objet[m_nb];
-		for (int i = 0; i<m_nb; i++)
-		{
-		}
+		m_tab.resize(other.m_nb);
 	}
 	return *this;
 }
 
 void Inventaire::affiche() const
 {
-	int i;
-
-	if (m_tab != NULL)
+	if (!(m_tab.empty()))
 	{
 		cout << "Inventaire : " << endl;
-		for (i = 0; i < m_nb; i++)
+		for (auto tab : m_tab)
 		{
-			if (m_tab[i].Getid() == 0)
+			if (tab.Getid() == 0)
 			{
 				
 			}
 			else
 			{
-				m_tab[i].affiche();
+				tab.affiche();
 			}
 		}
 	}
@@ -86,11 +73,11 @@ void Inventaire::init(Objet &item)
 {
 	bool present = false;
 
-	for (int i = 0; i<m_nb; i++)
+	for (auto& tab : m_tab)
 	{
-		if (m_tab[i].Getid() == 0 && present != true)
+		if (tab.Getid() == 0 && present != true)
 		{
-			m_tab[i] = item;
+			tab = item;
 			present = true;
 		}
 		else
@@ -102,12 +89,12 @@ void Inventaire::init(Objet &item)
 
 void Inventaire::Jeter(Objet &item)
 {
-	for (int i = 0; i<m_nb; i++)
+	for (auto& tab : m_tab)
 	{
-		if (m_tab[i] == item)
+		if (tab == item)
 		{
-			m_tab[i].Setid(0);
-			m_tab[i].Setnom("None");
+			tab.Setid(0);
+			tab.Setnom("None");
 		}
 	}
 }
@@ -117,7 +104,7 @@ int Inventaire::Getnb() const
 	return m_nb;
 }
 
-void Inventaire::Setnb(int nb)
+void Inventaire::Setnb(size_t nb)
 {
 	m_nb = nb;
 }

@@ -104,6 +104,10 @@ void Block::affiche() const
 	{
 		m_position->affiche();
 	}
+	if (m_face1 != NULL)
+	{
+		m_face1->affiche();
+	}
 }
 
 void Block::deplacer(Coordonnees &coordonnees)

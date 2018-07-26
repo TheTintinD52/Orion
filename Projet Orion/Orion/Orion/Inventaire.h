@@ -2,12 +2,13 @@
 #define INVENTAIRE_H
 
 #include "Objet.h"
+#include "vector"
 
 class Inventaire
 {
 public:
 	Inventaire();
-	Inventaire(int);
+	Inventaire(size_t);
 	virtual ~Inventaire();
 	Inventaire(const Inventaire&);
 	Inventaire& operator=(const Inventaire&);
@@ -18,11 +19,11 @@ public:
 	void Jeter(Objet &);
 
 	int Getnb() const;
-	void Setnb(int);
+	void Setnb(size_t);
 
 protected:
-	int m_nb;
-	Objet *m_tab;
+	size_t m_nb;
+	std::vector<Objet> m_tab;
 };
 
 #endif
