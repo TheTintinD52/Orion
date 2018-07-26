@@ -4,22 +4,22 @@
 
 using namespace std;
 
-Joueur::Joueur() : Personnage(), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur() : Personnage(), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(int vie) : Personnage(vie), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(int vie) : Personnage(vie), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(string nomPerso, int vie) : Personnage(nomPerso, vie), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(string nomPerso, int vie) : Personnage(nomPerso, vie), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu), m_faim(100), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(string nomPerso, int vie, int endu) : Personnage(nomPerso, vie, endu), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }

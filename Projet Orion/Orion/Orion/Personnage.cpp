@@ -3,17 +3,17 @@
 
 using namespace std;
 
-Personnage::Personnage() : m_nom("Error"), m_vie(100), m_endurance(100)
+Personnage::Personnage() : m_nom("Error"), m_vie(0), m_endurance(0)
 {
 
 }
 
-Personnage::Personnage(int vie) : m_nom("Error"), m_vie(vie), m_endurance(100)
+Personnage::Personnage(int vie) : m_nom("Error"), m_vie(vie), m_endurance(0)
 {
 
 }
 
-Personnage::Personnage(string nom, int vie) : m_nom(nom), m_vie(vie), m_endurance(100)
+Personnage::Personnage(string nom, int vie) : m_nom(nom), m_vie(vie), m_endurance(0)
 {
 
 }
