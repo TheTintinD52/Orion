@@ -18,7 +18,7 @@ public:
 	void init(Objet &);
 	void Jeter(Objet &);
 
-	int Getnb() const;
+	size_t Getnb() const;
 	void Setnb(size_t);
 
 protected:

@@ -99,7 +99,7 @@ void Inventaire::Jeter(Objet &item)
 	}
 }
 
-int Inventaire::Getnb() const
+size_t Inventaire::Getnb() const
 {
 	return m_nb;
 }
