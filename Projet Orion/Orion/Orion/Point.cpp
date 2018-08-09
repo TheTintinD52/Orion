@@ -1,9 +1,6 @@
 #define _USE_MATH_DEFINES
 
 #include "Point.h"
-#include "iostream"
-#include "cmath"
-
 
 using namespace std;
 
@@ -32,52 +29,7 @@ Point::~Point()
 
 }
 
-void Point::majpolaire()
-{
-	m_r = sqrt(m_x*m_x + m_y*m_y);
-	m_t = atan2(m_y, m_x);
-}
-
-void Point::majcart()
-{
-	m_x = m_r * cos(m_t);
-	m_y = m_r * sin(m_t);
-}
-
-void Point::affiche() const
-{
-	cout << "x = " << m_x << endl << "y = " << m_y << endl;
-}
-
-void Point::deplace(double dx, double dy)
-{
-	m_x = m_x + dx;
-	m_y = m_y + dy;
-	majpolaire();
-}
-
-void Point::homothetie(double cf)
-{
-	m_x = m_x * cf;
-	m_y = m_y * cf;
-	majpolaire();
-}
-
-void Point::rotation(double deg)
-{
-	deg = deg * M_PI / 180;
-	m_t = m_t + deg;
-	majcart();
-}
-
-void Point::initialise(double px, double py)
-{
-	m_x = px;
-	m_y = py;
-	majpolaire();
-}
-
-//operator overloading
+// operators overloading
 
 ostream& operator<<(ostream &os, Point &point)
 {
@@ -139,6 +91,55 @@ Point operator*(Point const &a, Point const &b)
 	copie *= b;
 	return copie;
 }
+
+// methodes
+
+void Point::majpolaire()
+{
+	m_r = sqrt(m_x*m_x + m_y*m_y);
+	m_t = atan2(m_y, m_x);
+}
+
+void Point::majcart()
+{
+	m_x = m_r * cos(m_t);
+	m_y = m_r * sin(m_t);
+}
+
+void Point::affiche() const
+{
+	cout << "x = " << m_x << endl << "y = " << m_y << endl;
+}
+
+void Point::deplace(double dx, double dy)
+{
+	m_x = m_x + dx;
+	m_y = m_y + dy;
+	majpolaire();
+}
+
+void Point::homothetie(double cf)
+{
+	m_x = m_x * cf;
+	m_y = m_y * cf;
+	majpolaire();
+}
+
+void Point::rotation(double deg)
+{
+	deg = deg * M_PI / 180;
+	m_t = m_t + deg;
+	majcart();
+}
+
+void Point::initialise(double px, double py)
+{
+	m_x = px;
+	m_y = py;
+	majpolaire();
+}
+
+// accesseurs
 
 double Point::Getx() const
 {

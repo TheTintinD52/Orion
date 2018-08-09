@@ -1,5 +1,3 @@
-#include "iostream"
-#include "string"
 #include "Objet.h"
 
 using namespace std;
@@ -30,6 +28,8 @@ Objet::Objet(const Objet& other)
 	m_nom = other.m_nom;
 }
 
+// operators overloading
+
 Objet&  Objet::operator=(const Objet& other)
 {
 	if (this != &other)
@@ -50,6 +50,8 @@ bool Objet::operator==(const Objet &item)
 		return false;
 }
 
+// methodes
+
 void Objet::affiche() const
 {
 	cout << "L'id de l'objet est de " << m_id << " et son nom est de " << m_nom << "." << endl;
@@ -61,4 +63,26 @@ void Objet::init()
 	cin >> m_id;
 	cout << "Entrez le nom de l'objet : " << endl;
 	cin >> m_nom;
+}
+
+// accesseurs
+
+int Objet::Getid() const
+{
+	return m_id;
+}
+
+void Objet::Setid(int val)
+{
+	m_id = val;
+}
+
+string Objet::Getnom() const
+{
+	return m_nom;
+}
+
+void Objet::Setnom(string val)
+{
+	m_nom = val;
 }

@@ -1,6 +1,7 @@
 #ifndef OUTILLAGE_H
 #define OUTILLAGE_H
 
+#include "iostream"
 #include "string"
 #include "Objet.h"
 

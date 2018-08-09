@@ -1,11 +1,12 @@
 #ifndef JOUEUR_H
 #define JOUEUR_H
 
+#include "iostream"
+#include "string"
 #include "Personnage.h"
 #include "Arme.h"
 #include "Outil.h"
 #include "Inventaire.h"
-
 
 class Joueur : public Personnage
 {

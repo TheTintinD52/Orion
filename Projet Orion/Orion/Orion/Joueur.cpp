@@ -1,5 +1,3 @@
-#include "iostream"
-#include "string"
 #include "Joueur.h"
 
 using namespace std;
@@ -62,6 +60,8 @@ Joueur::Joueur(const Joueur& other) : Personnage(other)
 	m_outil = new Outil(*(other.m_outil));
 }
 
+// operators overloading
+
 Joueur& Joueur::operator=(const Joueur& other)
 {
 	if (this != &other)
@@ -81,6 +81,8 @@ Joueur& Joueur::operator=(const Joueur& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Joueur::affiche() const
 {
@@ -147,6 +149,8 @@ void Joueur::boirePotionDeVie(int qtVie)
 	if (m_vie > 100)
 		m_vie = 100;
 }
+
+// accesseurs
 
 int Joueur::Getfaim() const
 {

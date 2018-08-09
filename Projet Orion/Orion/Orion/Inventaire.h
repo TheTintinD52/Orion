@@ -1,8 +1,9 @@
 #ifndef INVENTAIRE_H
 #define INVENTAIRE_H
 
-#include "Objet.h"
+#include "iostream"
 #include "vector"
+#include "Objet.h"
 
 class Inventaire
 {

@@ -1,6 +1,7 @@
 #ifndef ARME_H
 #define ARME_H
 
+#include "iostream"
 #include "string"
 #include "Outillage.h"
 

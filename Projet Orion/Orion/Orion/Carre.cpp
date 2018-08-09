@@ -40,6 +40,8 @@ Carre::Carre(const Carre &carre)
 	m_M2 = new Point(*(carre.m_M2));
 }
 
+// operators overloading
+
 Carre& Carre::operator=(const Carre &carre)
 {
 	if (this != &carre)
@@ -56,6 +58,8 @@ Carre& Carre::operator=(const Carre &carre)
 	return *this;
 }
 
+// methodes
+
 void Carre::affiche() const
 {
 	cout << "Les longueurs du carre sont de " << m_longueur1 << " " << m_longueur2 << " " << m_longueur3 << " " << m_longueur4 << endl;
@@ -68,6 +72,8 @@ void Carre::affiche() const
 		m_M2->affiche();
 	}
 }
+
+// accesseurs
 
 double Carre::Getlongueur() const
 {

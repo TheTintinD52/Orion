@@ -1,5 +1,3 @@
-#include "iostream"
-#include "Objet.h"
 #include "Inventaire.h"
 
 using namespace std;
@@ -24,6 +22,8 @@ Inventaire::Inventaire(const Inventaire& other) : m_nb(other.m_nb)
 	m_tab.resize(m_nb);
 }
 
+// operators overloading
+
 Inventaire& Inventaire::operator=(const Inventaire& other)
 {
 	if (this != &other)
@@ -33,6 +33,8 @@ Inventaire& Inventaire::operator=(const Inventaire& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Inventaire::affiche() const
 {
@@ -98,6 +100,8 @@ void Inventaire::Jeter(Objet &item)
 		}
 	}
 }
+
+// accesseurs
 
 size_t Inventaire::Getnb() const
 {

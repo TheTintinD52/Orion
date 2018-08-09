@@ -1,5 +1,4 @@
 #include "Etabli.h"
-#include "string"
 
 using namespace std;
 
@@ -43,6 +42,8 @@ Etabli::Etabli(const Etabli& other) : Block(other)
 
 }
 
+// operators overloading
+
 Etabli& Etabli::operator=(const Etabli& other)
 {
 	if (this != &other)
@@ -55,6 +56,8 @@ Etabli& Etabli::operator=(const Etabli& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Etabli::affiche() const
 {

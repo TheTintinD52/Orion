@@ -17,6 +17,8 @@ Animal::Animal(const Animal& other) : PNJ(other)
 
 }
 
+// operators overloading
+
 Animal& Animal::operator=(const Animal& other)
 {
 	if (this != &other)
@@ -29,6 +31,8 @@ Animal& Animal::operator=(const Animal& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Animal::affiche() const
 {

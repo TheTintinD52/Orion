@@ -1,8 +1,9 @@
 #ifndef ENNEMI_H
 #define ENNEMI_H
 
-#include "Personnage.h"
+#include "iostream"
 #include "string"
+#include "Personnage.h"
 #include "Arme.h"
 
 

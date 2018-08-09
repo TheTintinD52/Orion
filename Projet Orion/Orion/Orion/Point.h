@@ -2,6 +2,7 @@
 #define POINT_H
 
 #include "iostream"
+#include "cmath"
 
 class Point
 {
@@ -15,16 +16,17 @@ public:
 	Point(double, double);
 	Point(const Point &);
 	virtual ~Point();
-	void affiche() const;
-	void deplace(double, double);
-	void homothetie(double);
-	void rotation(double);
-	void initialise(double, double);
 	Point& operator=(const Point &);
 	Point& operator+=(const Point &);
 	Point& operator-=(const Point &);
 	Point& operator*=(const Point &);
 	friend std::ostream& operator<<(std::ostream&, Point &);
+
+	void affiche() const;
+	void deplace(double, double);
+	void homothetie(double);
+	void rotation(double);
+	void initialise(double, double);
 
 	double Getx() const;
 	void Setx(double);

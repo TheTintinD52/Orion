@@ -1,6 +1,4 @@
 #include "Outil.h"
-#include "iostream"
-#include "string"
 
 using namespace std;
 
@@ -34,6 +32,8 @@ Outil::Outil(const Outil& other) : Outillage(other)
 
 }
 
+// operators overloading
+
 Outil& Outil::operator=(const Outil& other)
 {
 	if (this != &other)
@@ -46,6 +46,8 @@ Outil& Outil::operator=(const Outil& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Outil::affiche()
 {

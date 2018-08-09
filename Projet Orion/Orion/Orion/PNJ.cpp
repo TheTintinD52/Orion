@@ -17,6 +17,8 @@ PNJ::PNJ(const PNJ& other) : Personnage(other)
 
 }
 
+// operators overloading
+
 PNJ& PNJ::operator=(const PNJ& other)
 {
 	if (this != &other)
@@ -29,6 +31,8 @@ PNJ& PNJ::operator=(const PNJ& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void PNJ::affiche() const
 {

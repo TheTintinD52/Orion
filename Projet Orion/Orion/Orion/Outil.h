@@ -1,8 +1,9 @@
 #ifndef OUTIL_H
 #define OUTIL_H
 
-#include "Outillage.h"
 #include "iostream"
+#include "string"
+#include "Outillage.h"
 
 class Outil : public Outillage
 {

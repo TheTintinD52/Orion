@@ -1,6 +1,4 @@
-#include "iostream"
 #include "Arme.h"
-#include "string"
 
 using namespace std;
 
@@ -39,6 +37,8 @@ Arme::Arme(const Arme& other) : Outillage(other), m_degat(other.m_degat)
 
 }
 
+// operators overloading
+
 Arme& Arme::operator=(const Arme& other)
 {
 	if (this != &other)
@@ -53,12 +53,16 @@ Arme& Arme::operator=(const Arme& other)
 	return *this;
 }
 
+// methodes
+
 void Arme::affiche() const
 {
 	cout << "Arme : " << endl;
 	Outillage::affiche();
 	cout << "Degat arme: " << m_degat << endl;
 }
+
+// accesseurs
 
 int Arme::Getdegat() const
 {

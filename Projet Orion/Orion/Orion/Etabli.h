@@ -1,6 +1,7 @@
 #ifndef ETABLI_H
 #define ETABLI_H
 
+#include "iostream"
 #include "Block.h"
 #include "string"
 

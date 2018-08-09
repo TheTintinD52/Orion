@@ -1,6 +1,8 @@
 #ifndef COORDONNEES_H
 #define COORDONNEES_H
 
+#include "iostream"
+
 class Coordonnees
 {
 public:

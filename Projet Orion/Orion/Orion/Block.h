@@ -1,6 +1,7 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
+#include "iostream"
 #include "string"
 #include "Carre.h"
 #include "Coordonnees.h"

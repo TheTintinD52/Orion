@@ -1,6 +1,4 @@
-#include "iostream"
 #include "Ennemi.h"
-#include "string"
 
 using namespace std;
 
@@ -39,6 +37,8 @@ Ennemi::Ennemi(const Ennemi& other) : Personnage(other)
 	m_arme = new Arme(*(other.m_arme));
 }
 
+// operators overloading
+
 Ennemi& Ennemi::operator=(const Ennemi& other)
 {
 	if (this != &other)
@@ -53,6 +53,8 @@ Ennemi& Ennemi::operator=(const Ennemi& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Ennemi::affiche() const
 {

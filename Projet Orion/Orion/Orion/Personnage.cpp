@@ -1,5 +1,4 @@
 #include "Personnage.h"
-#include "iostream"
 
 using namespace std;
 
@@ -33,6 +32,8 @@ Personnage::Personnage(const Personnage& other) : m_vie(other.m_vie), m_nom(othe
 
 }
 
+// operators overloading
+
 Personnage& Personnage::operator=(const Personnage& other)
 {
 	if (this != &other)
@@ -43,6 +44,8 @@ Personnage& Personnage::operator=(const Personnage& other)
 	}
 	return *this;
 }
+
+// methodes
 
 void Personnage::affiche() const
 {
@@ -60,6 +63,8 @@ void Personnage::recevoirDegats(int nbDegats)
 	if (m_vie <= 0)
 		m_vie = 0;
 }
+
+// accesseurs
 
 int Personnage::Getvie() const
 {

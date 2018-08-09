@@ -1,6 +1,7 @@
 #ifndef OBJET_H
 #define OBJET_H
 
+#include "iostream"
 #include "string"
 
 class Objet
@@ -12,28 +13,15 @@ public:
 	virtual ~Objet();
 	Objet(const Objet&);
 	Objet& operator=(const Objet&);
-
 	bool operator==(const Objet&);
 
 	void affiche() const;
 	void init();
 
-	int Getid()
-	{
-		return m_id;
-	}
-	void Setid(int val)
-	{
-		m_id = val;
-	}
-	std::string Getnom()
-	{
-		return m_nom;
-	}
-	void Setnom(std::string val)
-	{
-		m_nom = val;
-	}
+	int Getid() const;
+	void Setid(int val);
+	std::string Getnom() const;
+	void Setnom(std::string);
 
 protected :
 	int m_id;

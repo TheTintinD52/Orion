@@ -1,5 +1,4 @@
 #include "Outillage.h"
-#include "iostream"
 
 using namespace std;
 
@@ -33,6 +32,8 @@ Outillage::Outillage(const Outillage& other) : Objet(other), m_dura(other.m_dura
 
 }
 
+// operators overloading
+
 Outillage& Outillage::operator=(const Outillage& other)
 {
 	if (this != &other)
@@ -47,11 +48,15 @@ Outillage& Outillage::operator=(const Outillage& other)
 	return *this;
 }
 
+// methodes
+
 void Outillage::affiche() const
 {
 	Objet::affiche();
 	cout << "Durabilite outil : " << m_dura << endl;
 }
+
+// accesseurs
 
 int Outillage::Getdura() const
 {

@@ -1,4 +1,3 @@
-#include "iostream"
 #include "Coordonnees.h"
 
 using namespace std;
@@ -35,6 +34,8 @@ Coordonnees::Coordonnees(const Coordonnees& other)
 	m_z = other.m_z;
 }
 
+// operators overloading
+
 Coordonnees& Coordonnees::operator=(const Coordonnees& other)
 {
 	if (this != &other)
@@ -46,12 +47,16 @@ Coordonnees& Coordonnees::operator=(const Coordonnees& other)
 	return *this;
 }
 
+// methodes
+
 void Coordonnees::affiche() const
 {
 	cout << "X = " << m_x << endl;
 	cout << "Y = " << m_y << endl;
 	cout << "Z = " << m_z << endl;
 }
+
+// accesseurs
 
 int Coordonnees::Getx() const
 {

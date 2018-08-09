@@ -1,6 +1,7 @@
 #ifndef CARRE_H
 #define CARRE_H
 
+#include "iostream"
 #include "Point.h"
 
 class Carre

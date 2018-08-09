@@ -1,6 +1,7 @@
 #ifndef PNJ_H
 #define PNJ_H
 
+#include "iostream"
 #include "Personnage.h"
 
 class PNJ : public Personnage

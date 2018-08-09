@@ -1,5 +1,3 @@
-#include "string"
-#include "iostream"
 #include "Block.h"
 
 using namespace std;
@@ -68,6 +66,8 @@ Block::Block(const Block &other)
 	m_position = new Coordonnees(*(other.m_position));
 }
 
+// operators overloading
+
 Block& Block::operator=(const Block &other)
 {
 	if (this != &other)
@@ -96,6 +96,8 @@ Block& Block::operator=(const Block &other)
 	return *this;
 }
 
+// methodes
+
 void Block::affiche() const
 {
 	Objet::affiche();
@@ -115,6 +117,8 @@ void Block::deplacer(Coordonnees &coordonnees)
 	delete(m_position);
 	m_position = new Coordonnees(coordonnees);
 }
+
+// accesseurs
 
 double Block::GetvelMinage() const
 {
