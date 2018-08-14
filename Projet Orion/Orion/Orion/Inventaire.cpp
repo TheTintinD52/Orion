@@ -43,11 +43,7 @@ void Inventaire::affiche() const
 		cout << "Inventaire : " << endl;
 		for (auto tab : m_tab)
 		{
-			if (tab.Getid() == 0)
-			{
-				
-			}
-			else
+			if (!(tab.Getid() == 0))
 			{
 				tab.affiche();
 			}
@@ -57,14 +53,14 @@ void Inventaire::affiche() const
 
 void Inventaire::init(int nb)
 {
-	if (nb > 19)
+	if (nb > 19 || nb < 0) // a tester !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	{
 
 	}
-	else if (nb < 0)
+	/*else if (nb < 0)
 	{
 
-	}
+	}*/
 	else
 	{
 		m_tab[nb].init();
@@ -81,10 +77,6 @@ void Inventaire::init(Objet &item)
 		{
 			tab = item;
 			present = true;
-		}
-		else
-		{
-
 		}
 	}
 }
