@@ -1,89 +1,108 @@
-#include "Carre.h"
+#include <geometrie/Carre.h>
 
 using namespace std;
 
-Carre::Carre() : m_longueur1(0), m_longueur2(0), m_longueur3(0), m_longueur4(0), m_M1(NULL), m_M2(NULL)
+Carre::Carre() : m_p1(NULL), m_p2(NULL)
 {
 
 }
 
-Carre::Carre(float longueur) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur), m_M1(NULL), m_M2(NULL)
+Carre::Carre(float p1, float p2)
 {
-
+	if (p1 != p2)
+	{
+		m_p1 = new Point(p1);
+		m_p2 = new Point(p2);
+	}
+	else
+	{
+		m_p1 = new Point();
+		m_p2 = new Point(p1);
+	}
 }
 
-Carre::Carre(float longueur, Point &point) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
+Carre::Carre(float p1, float p2, float p3, float p4)
 {
-	m_M1 = new Point(point);
-	m_M2 = new Point(point);
+	if ((p1 != p3) || (p1 != p4) && (p2 != p3) || (p2 != p4))
+	{
+		m_p1 = new Point(p1, p2);
+		m_p2 = new Point(p3, p4);
+	}
+	else
+	{
+		m_p1 = new Point();
+		m_p2 = new Point(p1, p2);
+	}
 }
 
-Carre::Carre(float longueur, Point &point1, Point &point2) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
+Carre::Carre(Point &p1, Point &p2)
 {
-	m_M1 = new Point(point1);
-	m_M2 = new Point(point2);
+	if (p1 != p2)
+	{
+		m_p1 = new Point(p1);
+		m_p2 = new Point(p2);
+	}
+	else
+	{
+		m_p1 = new Point();
+		m_p2 = new Point(p1);
+	}
 }
 
 Carre::~Carre()
 {
-	delete(m_M1);
-	delete(m_M2);
+	delete(m_p1);
+	delete(m_p2);
 }
 
-Carre::Carre(const Carre &carre)
+Carre::Carre(const Carre &c)
 {
-	m_longueur1 = carre.m_longueur1;
-	m_longueur2 = carre.m_longueur2;
-	m_longueur3 = carre.m_longueur3;
-	m_longueur4 = carre.m_longueur4;
-	m_M1 = new Point(*(carre.m_M1));
-	m_M2 = new Point(*(carre.m_M2));
+	m_p1 = new Point(*(c.m_p1));
+	m_p2 = new Point(*(c.m_p2));
 }
 
-// operators overloading
-
-Carre& Carre::operator=(const Carre &carre)
+Carre & Carre::operator=(const Carre &c)
 {
-	if (this != &carre)
+	if (this != &c)
 	{
-		delete(m_M1);
-		delete(m_M2);
-		m_longueur1 = carre.m_longueur1;
-		m_longueur2 = carre.m_longueur2;
-		m_longueur3 = carre.m_longueur3;
-		m_longueur4 = carre.m_longueur4;
-		m_M1 = new Point(*(carre.m_M1));
-		m_M2 = new Point(*(carre.m_M2));
+		delete(m_p1);
+		delete(m_p2);
+		m_p1 = new Point(*(c.m_p1));
+		m_p2 = new Point(*(c.m_p2));
 	}
 	return *this;
 }
 
-// methodes
-
 void Carre::affiche() const
 {
-	cout << "Les longueurs du carre sont de " << m_longueur1 << " " << m_longueur2 << " " << m_longueur3 << " " << m_longueur4 << endl;
-	if (m_M1 != NULL)
+	m_p1->affiche();
+	m_p2->affiche();
+}
+
+void Carre::deplace(Carre &c)
+{
+	if ((m_p1 != c.m_p1) && (m_p2 != c.m_p2))
 	{
-		m_M1->affiche();
-	}
-	if (m_M2 != NULL)
-	{
-		m_M2->affiche();
+		delete(m_p1);
+		delete(m_p2);
+		m_p1 = new Point(*(c.m_p1));
+		m_p2 = new Point(*(c.m_p2));
 	}
 }
+
+void Carre::deplace(float p1, float p2, float p3, float p4)
+{
+	if ((p1 != p3) || (p1 != p4) && (p2 != p3) || (p2 != p4))
+	{
+		delete(m_p1);
+		delete(m_p2);
+		m_p1 = new Point(p1, p2);
+		m_p2 = new Point(p3 ,p4);
+	}
+}
+
+// operators overloading
+
+// methodes
 
 // accesseurs
-
-float Carre::Getlongueur() const
-{
-	return m_longueur1;
-}
-
-void Carre::Setlongueur(float val)
-{
-	m_longueur1 = val;
-	m_longueur2 = val;
-	m_longueur3 = val;
-	m_longueur4 = val;
-}

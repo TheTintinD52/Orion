@@ -1,6 +1,6 @@
 #define _USE_MATH_DEFINES
 
-#include "Point.h"
+#include <geometrie/Point.h>
 
 using namespace std;
 

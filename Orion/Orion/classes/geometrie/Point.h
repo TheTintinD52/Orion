@@ -21,7 +21,7 @@ public:
 	Point& operator-=(const Point &);
 	Point& operator*=(const Point &);
 	friend std::ostream& operator<<(std::ostream&, Point &);
-
+ 
 	friend bool operator!=(Point&, Point&);
 	friend bool operator==(Point&, Point&);
 

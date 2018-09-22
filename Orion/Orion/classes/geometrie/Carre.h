@@ -8,22 +8,19 @@ class Carre
 {
 public:
 	Carre();
-	Carre(float);
-	Carre(float, Point&);
-	Carre(float, Point&, Point&);
+	Carre(float, float);
+	Carre(float, float, float, float);
+	Carre(Point &, Point &);
 	virtual ~Carre();
 	Carre(const Carre &);
 	Carre& operator=(const Carre &);
 
 	void affiche() const;
-
-	float Getlongueur() const;
-	void Setlongueur(float);
+	void deplace(Carre &);
+	void deplace(float, float, float, float);
 
 protected :
-	float m_longueur1, m_longueur2, m_longueur3, m_longueur4;
-	Point *m_M1;
-	Point *m_M2;
+	Point *m_p1, *m_p2;
 };
 
 #endif

@@ -87,7 +87,7 @@
     <ClCompile Include="classes\autre\Inventaire.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="classes\geometrie\Droite.cpp">
+    <ClCompile Include="classes\geometrie\Segment.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,7 +161,7 @@
     <ClInclude Include="classes\autre\Inventaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="classes\geometrie\Droite.h">
+    <ClInclude Include="classes\geometrie\Segment.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

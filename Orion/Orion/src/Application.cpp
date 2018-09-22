@@ -1,4 +1,4 @@
-#include <iostream>
+#include <GLFW/glfw3.h>
 #include <string>
 #include <vector>
 #include <Entite/Animal.h>
@@ -15,7 +15,7 @@
 #include <Entite/Entite.h>
 #include <Entite/PNJ.h>
 #include <geometrie/Point.h>
-#include <geometrie/Droite.h>
+#include <geometrie/Segment.h>
 
 using namespace std;
 
@@ -23,22 +23,9 @@ int main()
 {
 	Point p1(2.0f, 3.0f), p2(1.3f, 2.7f), p3(4.0f), p4(0.0f);
 	
-	Droite d1(p1, p2), d2(p3, p4);
-
-	d1.affiche();
-
-	d2.affiche();
-
-	if (d1 == d2)
-	{
-		cout << "ils sont =" << endl;
-	}
-	else
-	{
-		cout << "ils sont !=" << endl;
-	}
-	/*
-	Carre carre1(2.3, p1, p2);
+	Segment d1(p1, p2), d2(p3, p4);
+	
+	Carre carre1(p1, p2);
 
 	Coordonnees c1(1, 2, 3);
 	Coordonnees c2(-3, 4, 3);
@@ -74,7 +61,29 @@ int main()
 	cout << "Vie de " << e1.Getnom() << " = " << e1.Getvie() << endl << endl;
 	j.prendreItem(i2);
 	j.prendreItem(a1);
-	j.afficheInventaire();*/
+	j.afficheInventaire();
 
-	cin.get();
+	//------------------------------------------------------------------------------------//
+
+	int a = glfwInit();
+	cout << a << endl;
+
+	GLFWwindow* window = glfwCreateWindow(640, 420, "Orion", NULL, NULL);
+
+	if (!window)
+	{
+		glfwTerminate();
+		perror("Error can't create window !");
+		return -1;
+	}
+
+	glfwMakeContextCurrent(window);
+
+	while (!glfwWindowShouldClose(window))
+	{
+		glClear(GL_COLOR_BUFFER_BIT);
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+	}
+	glfwTerminate();
 }
