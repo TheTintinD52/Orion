@@ -15,153 +15,147 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\Application.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Block.cpp">
+    <ClCompile Include="classes\menucreatif\MenuBlockConstruction.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Coordonnees.cpp">
+    <ClCompile Include="classes\menucreatif\MenuBlockDecoratifs.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Personnage.cpp">
+    <ClCompile Include="classes\menucreatif\MenuBluestone.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Inventaire.cpp">
+    <ClCompile Include="classes\menucreatif\MenuCreatif.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Outillage.cpp">
+    <ClCompile Include="classes\menucreatif\MenuMoyensTransport.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Outil.cpp">
+    <ClCompile Include="classes\menucreatif\MenuCombat.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Arme.cpp">
+    <ClCompile Include="classes\menucreatif\MenuDivers.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="PNJ.cpp">
+    <ClCompile Include="classes\menucreatif\MenuNourriture.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Animal.cpp">
+    <ClCompile Include="classes\menucreatif\MenuPotions.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Etabli.cpp">
+    <ClCompile Include="classes\Entite\Entite.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Joueur.cpp">
+    <ClCompile Include="classes\Entite\PNJ.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Ennemi.cpp">
+    <ClCompile Include="classes\Entite\Joueur.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Objet.cpp">
+    <ClCompile Include="classes\Entite\Ennemi.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Point.cpp">
+    <ClCompile Include="classes\Entite\Animal.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Carre.cpp">
+    <ClCompile Include="classes\geometrie\Carre.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuCreatif.cpp">
+    <ClCompile Include="classes\geometrie\Point.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuBlockDecoratifs.cpp">
+    <ClCompile Include="classes\geometrie\Coordonnees.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuBlockConstruction.cpp">
+    <ClCompile Include="classes\objet\Arme.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuDivers.cpp">
+    <ClCompile Include="classes\objet\Block.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuCombat.cpp">
+    <ClCompile Include="classes\objet\Objet.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuBluestone.cpp">
+    <ClCompile Include="classes\objet\Outil.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuMoyensTransport.cpp">
+    <ClCompile Include="classes\objet\Outillage.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MenuNourriture.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuPotions.cpp">
+    <ClCompile Include="classes\autre\Inventaire.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Block.h">
+    <ClInclude Include="classes\menucreatif\MenuBlockConstruction.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Coordonnees.h">
+    <ClInclude Include="classes\menucreatif\MenuDivers.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Personnage.h">
+    <ClInclude Include="classes\menucreatif\MenuBluestone.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Inventaire.h">
+    <ClInclude Include="classes\menucreatif\MenuBlockDecoratifs.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Outillage.h">
+    <ClInclude Include="classes\menucreatif\MenuCreatif.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Outil.h">
+    <ClInclude Include="classes\menucreatif\MenuMoyensTransport.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Arme.h">
+    <ClInclude Include="classes\menucreatif\MenuCombat.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="PNJ.h">
+    <ClInclude Include="classes\menucreatif\MenuNourriture.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Animal.h">
+    <ClInclude Include="classes\menucreatif\MenuPotions.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Etabli.h">
+    <ClInclude Include="classes\Entite\Entite.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Joueur.h">
+    <ClInclude Include="classes\Entite\PNJ.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Ennemi.h">
+    <ClInclude Include="classes\Entite\Joueur.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Objet.h">
+    <ClInclude Include="classes\Entite\Ennemi.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Point.h">
+    <ClInclude Include="classes\Entite\Animal.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Carre.h">
+    <ClInclude Include="classes\geometrie\Carre.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuCreatif.h">
+    <ClInclude Include="classes\geometrie\Point.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuBlockDecoratifs.h">
+    <ClInclude Include="classes\geometrie\Coordonnees.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuBlockConstruction.h">
+    <ClInclude Include="classes\objet\Arme.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuDivers.h">
+    <ClInclude Include="classes\objet\Block.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuCombat.h">
+    <ClInclude Include="classes\objet\Objet.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuBluestone.h">
+    <ClInclude Include="classes\objet\Outil.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuMoyensTransport.h">
+    <ClInclude Include="classes\objet\Outillage.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MenuNourriture.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuPotions.h">
+    <ClInclude Include="classes\autre\Inventaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

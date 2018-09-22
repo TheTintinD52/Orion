@@ -1,16 +1,11 @@
-﻿  Block.cpp
-  Carre.cpp
-  Etabli.cpp
-  Point.cpp
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\point.cpp(130): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\point.cpp(146): warning C4244: 'return' : conversion de 'const double' en 'float', perte possible de données
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\point.cpp(156): warning C4244: 'return' : conversion de 'const double' en 'float', perte possible de données
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\point.cpp(166): warning C4244: 'return' : conversion de 'const double' en 'float', perte possible de données
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\point.cpp(176): warning C4244: 'return' : conversion de 'const double' en 'float', perte possible de données
-  main.cpp
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\main.cpp(25): warning C4305: 'argument' : troncation de 'double' à 'float'
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\main.cpp(27): warning C4305: 'argument' : troncation de 'double' à 'float'
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\main.cpp(32): warning C4305: 'argument' : troncation de 'double' à 'float'
-d:\08.programme\00.application\01.c++\orion\projet orion\orion\orion\main.cpp(33): warning C4305: 'argument' : troncation de 'double' à 'float'
+﻿  Ennemi.cpp
+  Joueur.cpp
+  Arme.cpp
+  Outil.cpp
+  Outillage.cpp
+  Application.cpp
+d:\08.programme\00.application\01.c++\orion\orion\orion\src\application.cpp(24): warning C4305: 'argument' : troncation de 'double' à 'float'
+d:\08.programme\00.application\01.c++\orion\orion\orion\src\application.cpp(26): warning C4305: 'argument' : troncation de 'double' à 'float'
+d:\08.programme\00.application\01.c++\orion\orion\orion\src\application.cpp(31): warning C4305: 'argument' : troncation de 'double' à 'float'
   Génération de code en cours...
-  Orion.vcxproj -> D:\08.Programme\00.Application\01.C++\Orion\Projet Orion\Orion\Debug\Orion.exe
+  Orion.vcxproj -> D:\08.Programme\00.Application\01.C++\Orion\Orion\Debug\Orion.exe

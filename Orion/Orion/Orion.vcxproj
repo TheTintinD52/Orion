@@ -76,7 +76,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Orion\classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -94,10 +99,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Orion\classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -115,57 +123,55 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Animal.cpp" />
-    <ClCompile Include="Arme.cpp" />
-    <ClCompile Include="Block.cpp" />
-    <ClCompile Include="MenuBlockConstruction.cpp" />
-    <ClCompile Include="MenuBlockDecoratifs.cpp" />
-    <ClCompile Include="MenuBluestone.cpp" />
-    <ClCompile Include="Carre.cpp" />
-    <ClCompile Include="MenuCombat.cpp" />
-    <ClCompile Include="Coordonnees.cpp" />
-    <ClCompile Include="MenuDivers.cpp" />
-    <ClCompile Include="Ennemi.cpp" />
-    <ClCompile Include="Etabli.cpp" />
-    <ClCompile Include="Inventaire.cpp" />
-    <ClCompile Include="Joueur.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuCreatif.cpp" />
-    <ClCompile Include="MenuMoyensTransport.cpp" />
-    <ClCompile Include="MenuNourriture.cpp" />
-    <ClCompile Include="Objet.cpp" />
-    <ClCompile Include="Outil.cpp" />
-    <ClCompile Include="Outillage.cpp" />
-    <ClCompile Include="Personnage.cpp" />
-    <ClCompile Include="PNJ.cpp" />
-    <ClCompile Include="Point.cpp" />
-    <ClCompile Include="MenuPotions.cpp" />
+    <ClCompile Include="classes\Entite\Animal.cpp" />
+    <ClCompile Include="classes\objet\Arme.cpp" />
+    <ClCompile Include="classes\objet\Block.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuBlockConstruction.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuBlockDecoratifs.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuBluestone.cpp" />
+    <ClCompile Include="classes\geometrie\Carre.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuCombat.cpp" />
+    <ClCompile Include="classes\geometrie\Coordonnees.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuDivers.cpp" />
+    <ClCompile Include="classes\Entite\Ennemi.cpp" />
+    <ClCompile Include="classes\autre\Inventaire.cpp" />
+    <ClCompile Include="classes\Entite\Joueur.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuCreatif.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuMoyensTransport.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuNourriture.cpp" />
+    <ClCompile Include="classes\objet\Objet.cpp" />
+    <ClCompile Include="classes\objet\Outil.cpp" />
+    <ClCompile Include="classes\objet\Outillage.cpp" />
+    <ClCompile Include="classes\Entite\Entite.cpp" />
+    <ClCompile Include="classes\Entite\PNJ.cpp" />
+    <ClCompile Include="classes\geometrie\Point.cpp" />
+    <ClCompile Include="classes\menucreatif\MenuPotions.cpp" />
+    <ClCompile Include="src\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animal.h" />
-    <ClInclude Include="Arme.h" />
-    <ClInclude Include="Block.h" />
-    <ClInclude Include="MenuBlockConstruction.h" />
-    <ClInclude Include="MenuBlockDecoratifs.h" />
-    <ClInclude Include="MenuBluestone.h" />
-    <ClInclude Include="Carre.h" />
-    <ClInclude Include="MenuCombat.h" />
-    <ClInclude Include="Coordonnees.h" />
-    <ClInclude Include="MenuDivers.h" />
-    <ClInclude Include="Ennemi.h" />
-    <ClInclude Include="Etabli.h" />
-    <ClInclude Include="Inventaire.h" />
-    <ClInclude Include="Joueur.h" />
-    <ClInclude Include="MenuCreatif.h" />
-    <ClInclude Include="MenuMoyensTransport.h" />
-    <ClInclude Include="MenuNourriture.h" />
-    <ClInclude Include="Objet.h" />
-    <ClInclude Include="Outil.h" />
-    <ClInclude Include="Outillage.h" />
-    <ClInclude Include="Personnage.h" />
-    <ClInclude Include="PNJ.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="MenuPotions.h" />
+    <ClInclude Include="classes\Entite\Animal.h" />
+    <ClInclude Include="classes\objet\Arme.h" />
+    <ClInclude Include="classes\objet\Block.h" />
+    <ClInclude Include="classes\menucreatif\MenuBlockConstruction.h" />
+    <ClInclude Include="classes\menucreatif\MenuBlockDecoratifs.h" />
+    <ClInclude Include="classes\menucreatif\MenuBluestone.h" />
+    <ClInclude Include="classes\geometrie\Carre.h" />
+    <ClInclude Include="classes\menucreatif\MenuCombat.h" />
+    <ClInclude Include="classes\geometrie\Coordonnees.h" />
+    <ClInclude Include="classes\menucreatif\MenuDivers.h" />
+    <ClInclude Include="classes\Entite\Ennemi.h" />
+    <ClInclude Include="classes\autre\Inventaire.h" />
+    <ClInclude Include="classes\Entite\Joueur.h" />
+    <ClInclude Include="classes\menucreatif\MenuCreatif.h" />
+    <ClInclude Include="classes\menucreatif\MenuMoyensTransport.h" />
+    <ClInclude Include="classes\menucreatif\MenuNourriture.h" />
+    <ClInclude Include="classes\objet\Objet.h" />
+    <ClInclude Include="classes\objet\Outil.h" />
+    <ClInclude Include="classes\objet\Outillage.h" />
+    <ClInclude Include="classes\Entite\Entite.h" />
+    <ClInclude Include="classes\Entite\PNJ.h" />
+    <ClInclude Include="classes\geometrie\Point.h" />
+    <ClInclude Include="classes\menucreatif\MenuPotions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
