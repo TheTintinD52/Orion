@@ -146,6 +146,7 @@
     <ClCompile Include="classes\Entite\PNJ.cpp" />
     <ClCompile Include="classes\geometrie\Point.cpp" />
     <ClCompile Include="classes\menucreatif\MenuPotions.cpp" />
+    <ClCompile Include="classes\geometrie\Droite.cpp" />
     <ClCompile Include="src\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +173,7 @@
     <ClInclude Include="classes\Entite\PNJ.h" />
     <ClInclude Include="classes\geometrie\Point.h" />
     <ClInclude Include="classes\menucreatif\MenuPotions.h" />
+    <ClInclude Include="classes\geometrie\Droite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

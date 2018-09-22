@@ -7,7 +7,7 @@
 class Point
 {
 protected:
-	double m_x, m_y, m_r, m_t;
+	float m_x, m_y, m_r, m_t;
 	void majpolaire();
 	void majcart();
 public:
@@ -21,6 +21,9 @@ public:
 	Point& operator-=(const Point &);
 	Point& operator*=(const Point &);
 	friend std::ostream& operator<<(std::ostream&, Point &);
+
+	friend bool operator!=(Point&, Point&);
+	friend bool operator==(Point&, Point&);
 
 	void affiche() const;
 	void deplace(float, float);

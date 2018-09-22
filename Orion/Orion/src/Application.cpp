@@ -15,14 +15,29 @@
 #include <Entite/Entite.h>
 #include <Entite/PNJ.h>
 #include <geometrie/Point.h>
+#include <geometrie/Droite.h>
 
 using namespace std;
 
 int main()
 {
-	Point p1(2, 3);
-	Point p2(1.3, 2.7);
+	Point p1(2.0f, 3.0f), p2(1.3f, 2.7f), p3(4.0f), p4(0.0f);
+	
+	Droite d1(p1, p2), d2(p3, p4);
 
+	d1.affiche();
+
+	d2.affiche();
+
+	if (d1 == d2)
+	{
+		cout << "ils sont =" << endl;
+	}
+	else
+	{
+		cout << "ils sont !=" << endl;
+	}
+	/*
 	Carre carre1(2.3, p1, p2);
 
 	Coordonnees c1(1, 2, 3);
@@ -59,7 +74,7 @@ int main()
 	cout << "Vie de " << e1.Getnom() << " = " << e1.Getvie() << endl << endl;
 	j.prendreItem(i2);
 	j.prendreItem(a1);
-	j.afficheInventaire();
+	j.afficheInventaire();*/
 
 	cin.get();
 }

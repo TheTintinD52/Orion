@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Point::Point() : m_x(0), m_y(0)
+Point::Point() : m_x(0.0f), m_y(0.0f)
 {
 
 }
@@ -104,6 +104,24 @@ void Point::majcart()
 {
 	m_x = m_r * cos(m_t);
 	m_y = m_r * sin(m_t);
+}
+
+bool operator!=(Point &p1, Point &p2)
+{
+	if (p1.Getx() != p2.Getx() || p1.Gety() != p2.Gety() || p1.Getr() != p2.Getr() || p1.Gett() != p2.Gett())
+	{
+		return true;
+	}
+	return false;
+}
+
+bool operator==(Point &p1, Point &p2)
+{
+	if (p1 != p2)
+	{
+		return true;
+	}
+	return false;
 }
 
 void Point::affiche() const

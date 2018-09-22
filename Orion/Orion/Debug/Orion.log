@@ -1,11 +1,2 @@
-﻿  Ennemi.cpp
-  Joueur.cpp
-  Arme.cpp
-  Outil.cpp
-  Outillage.cpp
-  Application.cpp
-d:\08.programme\00.application\01.c++\orion\orion\orion\src\application.cpp(24): warning C4305: 'argument' : troncation de 'double' à 'float'
-d:\08.programme\00.application\01.c++\orion\orion\orion\src\application.cpp(26): warning C4305: 'argument' : troncation de 'double' à 'float'
-d:\08.programme\00.application\01.c++\orion\orion\orion\src\application.cpp(31): warning C4305: 'argument' : troncation de 'double' à 'float'
-  Génération de code en cours...
+﻿  Droite.cpp
   Orion.vcxproj -> D:\08.Programme\00.Application\01.C++\Orion\Orion\Debug\Orion.exe
