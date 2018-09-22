@@ -7,18 +7,18 @@ Carre::Carre() : m_longueur1(0), m_longueur2(0), m_longueur3(0), m_longueur4(0),
 
 }
 
-Carre::Carre(double longueur) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur), m_M1(NULL), m_M2(NULL)
+Carre::Carre(float longueur) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur), m_M1(NULL), m_M2(NULL)
 {
 
 }
 
-Carre::Carre(double longueur, Point &point) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
+Carre::Carre(float longueur, Point &point) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
 {
 	m_M1 = new Point(point);
 	m_M2 = new Point(point);
 }
 
-Carre::Carre(double longueur, Point &point1, Point &point2) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
+Carre::Carre(float longueur, Point &point1, Point &point2) : m_longueur1(longueur), m_longueur2(longueur), m_longueur3(longueur), m_longueur4(longueur)
 {
 	m_M1 = new Point(point1);
 	m_M2 = new Point(point2);
@@ -75,12 +75,12 @@ void Carre::affiche() const
 
 // accesseurs
 
-double Carre::Getlongueur() const
+float Carre::Getlongueur() const
 {
 	return m_longueur1;
 }
 
-void Carre::Setlongueur(double val)
+void Carre::Setlongueur(float val)
 {
 	m_longueur1 = val;
 	m_longueur2 = val;

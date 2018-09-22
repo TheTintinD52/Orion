@@ -17,12 +17,12 @@ Block::Block(int id, string nom) : Objet(id, nom), m_velMinage(0), m_position(NU
 
 }
 
-Block::Block(int id, string nom, double velMinage) : Objet(id, nom), m_velMinage(velMinage), m_position(NULL), m_face1(NULL), m_face2(NULL), m_face3(NULL), m_face4(NULL), m_face5(NULL), m_face6(NULL)
+Block::Block(int id, string nom, float velMinage) : Objet(id, nom), m_velMinage(velMinage), m_position(NULL), m_face1(NULL), m_face2(NULL), m_face3(NULL), m_face4(NULL), m_face5(NULL), m_face6(NULL)
 {
 
 }
 
-Block::Block(int id, string nom, double velMinage, Carre &carre) : Objet(id, nom), m_velMinage(velMinage), m_position(NULL)
+Block::Block(int id, string nom, float velMinage, Carre &carre) : Objet(id, nom), m_velMinage(velMinage), m_position(NULL)
 {
 	m_face1 = new Carre(carre);
 	m_face2 = new Carre(carre);
@@ -32,7 +32,7 @@ Block::Block(int id, string nom, double velMinage, Carre &carre) : Objet(id, nom
 	m_face6 = new Carre(carre);
 }
 
-Block::Block(int id, string nom, double velMinage, Carre &carre, Coordonnees &coordonnees) : Objet(id, nom), m_velMinage(velMinage)
+Block::Block(int id, string nom, float velMinage, Carre &carre, Coordonnees &coordonnees) : Objet(id, nom), m_velMinage(velMinage)
 {
 	m_face1 = new Carre(carre);
 	m_face2 = new Carre(carre);
@@ -120,12 +120,12 @@ void Block::deplacer(Coordonnees &coordonnees)
 
 // accesseurs
 
-double Block::GetvelMinage() const
+float Block::GetvelMinage() const
 {
 	return m_velMinage;
 }
 
-void Block::SetvelMinage(double val)
+void Block::SetvelMinage(float val)
 {
 	m_velMinage = val;
 }

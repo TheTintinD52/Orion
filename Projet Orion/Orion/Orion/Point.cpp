@@ -9,12 +9,12 @@ Point::Point() : m_x(0), m_y(0)
 
 }
 
-Point::Point(double nb) : m_x(nb), m_y(nb)
+Point::Point(float nb) : m_x(nb), m_y(nb)
 {
 
 }
 
-Point::Point(double x, double y) : m_x(x), m_y(y)
+Point::Point(float x, float y) : m_x(x), m_y(y)
 {
 
 }
@@ -111,28 +111,28 @@ void Point::affiche() const
 	cout << "x = " << m_x << endl << "y = " << m_y << endl;
 }
 
-void Point::deplace(double dx, double dy)
+void Point::deplace(float dx, float dy)
 {
 	m_x = m_x + dx;
 	m_y = m_y + dy;
 	majpolaire();
 }
 
-void Point::homothetie(double cf)
+void Point::homothetie(float cf)
 {
 	m_x = m_x * cf;
 	m_y = m_y * cf;
 	majpolaire();
 }
 
-void Point::rotation(double deg)
+void Point::rotation(float deg)
 {
 	deg = deg * M_PI / 180;
 	m_t = m_t + deg;
 	majcart();
 }
 
-void Point::initialise(double px, double py)
+void Point::initialise(float px, float py)
 {
 	m_x = px;
 	m_y = py;
@@ -141,42 +141,42 @@ void Point::initialise(double px, double py)
 
 // accesseurs
 
-double Point::Getx() const
+float Point::Getx() const
 {
 	return m_x;
 }
 
-void Point::Setx(double val)
+void Point::Setx(float val)
 {
 	m_x = val;
 }
 
-double Point::Gety() const
+float Point::Gety() const
 {
 	return m_y;
 }
 
-void Point::Sety(double val)
+void Point::Sety(float val)
 {
 	m_y = val;
 }
 
-double Point::Getr() const
+float Point::Getr() const
 {
 	return m_r;
 }
 
-void Point::Setr(double val)
+void Point::Setr(float val)
 {
 	m_r = val;
 }
 
-double Point::Gett() const
+float Point::Gett() const
 {
 	return m_t;
 }
 
-void Point::Sett(double val)
+void Point::Sett(float val)
 {
 	m_t = val;
 }

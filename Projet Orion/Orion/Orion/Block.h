@@ -13,9 +13,9 @@ public:
 	Block();
 	Block(int);
 	Block(int, std::string);
-	Block(int, std::string, double);
-	Block(int, std::string, double, Carre&);
-	Block(int, std::string, double, Carre&, Coordonnees&);
+	Block(int, std::string, float);
+	Block(int, std::string, float, Carre&);
+	Block(int, std::string, float, Carre&, Coordonnees&);
 	virtual ~Block();
 	Block(const Block&);
 
@@ -24,11 +24,11 @@ public:
 	void affiche() const;
 	void deplacer(Coordonnees&);
 
-	double GetvelMinage() const;
-	void SetvelMinage(double val);
+	float GetvelMinage() const;
+	void SetvelMinage(float val);
 
 protected:
-	double m_velMinage;
+	float m_velMinage;
 	Carre *m_face1, *m_face2, *m_face3, *m_face4, *m_face5, *m_face6;
 	Coordonnees *m_position;
 };

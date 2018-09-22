@@ -11,9 +11,9 @@ public:
 	Etabli();
 	Etabli(int);
 	Etabli(int, std::string);
-	Etabli(int, std::string, double);
-	Etabli(int, std::string, double, Carre&);
-	Etabli(int, std::string, double, Carre&, Coordonnees&);
+	Etabli(int, std::string, float);
+	Etabli(int, std::string, float, Carre&);
+	Etabli(int, std::string, float, Carre&, Coordonnees&);
 	virtual ~Etabli();
 	Etabli(const Etabli&);
 	Etabli& operator=(const Etabli&);

@@ -17,17 +17,17 @@ Etabli::Etabli(int id, string nom) : Block(id, nom)
 
 }
 
-Etabli::Etabli(int id, string nom, double velMinage) : Block(id, nom, velMinage)
+Etabli::Etabli(int id, string nom, float velMinage) : Block(id, nom, velMinage)
 {
 
 }
 
-Etabli::Etabli(int id, string nom, double velMinage, Carre &carre) : Block(id, nom, velMinage, carre)
+Etabli::Etabli(int id, string nom, float velMinage, Carre &carre) : Block(id, nom, velMinage, carre)
 {
 
 }
 
-Etabli::Etabli(int id, string nom, double velMinage, Carre &carre, Coordonnees &coordonnees) : Block(id, nom, velMinage, carre, coordonnees)
+Etabli::Etabli(int id, string nom, float velMinage, Carre &carre, Coordonnees &coordonnees) : Block(id, nom, velMinage, carre, coordonnees)
 {
 
 }

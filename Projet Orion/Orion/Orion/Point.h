@@ -12,8 +12,8 @@ protected:
 	void majcart();
 public:
 	Point();
-	Point(double);
-	Point(double, double);
+	Point(float);
+	Point(float, float);
 	Point(const Point &);
 	virtual ~Point();
 	Point& operator=(const Point &);
@@ -23,19 +23,19 @@ public:
 	friend std::ostream& operator<<(std::ostream&, Point &);
 
 	void affiche() const;
-	void deplace(double, double);
-	void homothetie(double);
-	void rotation(double);
-	void initialise(double, double);
+	void deplace(float, float);
+	void homothetie(float);
+	void rotation(float);
+	void initialise(float, float);
 
-	double Getx() const;
-	void Setx(double);
-	double Gety() const;
-	void Sety(double);
-	double Getr() const;
-	void Setr(double);
-	double Gett() const;
-	void Sett(double);
+	float Getx() const;
+	void Setx(float);
+	float Gety() const;
+	void Sety(float);
+	float Getr() const;
+	void Setr(float);
+	float Gett() const;
+	void Sett(float);
 };
 
 Point operator+(Point const &a, Point const &b);
