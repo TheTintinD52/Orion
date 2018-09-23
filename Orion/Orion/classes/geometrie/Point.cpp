@@ -4,17 +4,22 @@
 
 using namespace std;
 
-Point::Point() : m_x(0.0f), m_y(0.0f)
+Point::Point() : Point(0.0f, 0.0f, 0.0f)
 {
 
 }
 
-Point::Point(float nb) : m_x(nb), m_y(nb)
+Point::Point(float nb) : Point(nb, nb, 0.0f)
 {
 
 }
 
-Point::Point(float x, float y) : m_x(x), m_y(y)
+Point::Point(float x, float y) : Point(x, y, 0.0f)
+{
+
+}
+
+Point::Point(float x, float y, float z) : m_x(x), m_y(y), m_z(z)
 {
 
 }
@@ -145,7 +150,7 @@ void Point::homothetie(float cf)
 
 void Point::rotation(float deg)
 {
-	deg = deg * M_PI / 180;
+	deg = deg * (float)M_PI / 180;
 	m_t = m_t + deg;
 	majcart();
 }
@@ -177,6 +182,16 @@ float Point::Gety() const
 void Point::Sety(float val)
 {
 	m_y = val;
+}
+
+float Point::Getz() const
+{
+	return m_z;
+}
+
+void Point::Setz(float val)
+{
+	m_z = val;
 }
 
 float Point::Getr() const

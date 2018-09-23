@@ -13,12 +13,12 @@ class Joueur : public Entite
 public:
 	Joueur();
 	Joueur(int);
-	Joueur(std::string, int);
-	Joueur(std::string, int, int);
-	Joueur(std::string, int, int, int);
-	Joueur(std::string, int, int, int, Inventaire&);
-	Joueur(std::string, int, int, int, Inventaire&, Arme&);
-	Joueur(std::string, int, int, int, Inventaire&, Arme&, Outil&);
+	Joueur(int, std::string);
+	Joueur(int, int, std::string);
+	Joueur(int, int, std::string, int);
+	Joueur(int, int, std::string, int, Inventaire&);
+	Joueur(int, int, std::string ,int, Inventaire&, Arme&);
+	Joueur(int, int, std::string, int, Inventaire&, Arme&, Outil&);
 	virtual ~Joueur();
 	Joueur(const Joueur&);
 	Joueur& operator=(const Joueur&);

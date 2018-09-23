@@ -5,7 +5,6 @@
 #include <objet/Arme.h>
 #include <objet/Block.h>
 #include <geometrie/Carre.h>
-#include <geometrie/Coordonnees.h>
 #include <Entite/Ennemi.h>
 #include <autre/Inventaire.h>
 #include <Entite/Joueur.h>
@@ -27,10 +26,7 @@ int main()
 	
 	Carre carre1(p1, p2);
 
-	Coordonnees c1(1, 2, 3);
-	Coordonnees c2(-3, 4, 3);
-
-	Block b(1, "Pierre", 1.3, carre1);
+	Block b(1, "Pierre", 1.3f, carre1);
 
 	Objet i2(2, "Sucre");
 
@@ -42,9 +38,9 @@ int main()
 
 	Outil o1(6, "Pelle", 23);
 
-	Joueur j("Paul", 150, 150, 150, i, a1, o1);
+	Joueur j(150, 150, "Paul", 150, i, a1, o1);
 
-	Ennemi e1("Tafiole", 50, 50, a3);
+	Ennemi e1(50, 50, "Tafiole", a3);
 
 	cout << endl;
 	j.affiche();

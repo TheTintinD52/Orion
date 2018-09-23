@@ -2,14 +2,22 @@
 
 using namespace std;
 
-Inventaire::Inventaire() : m_nb(0)
+Inventaire::Inventaire() : Inventaire(0)
 {
-	m_tab.clear();
+	
 }
 
 Inventaire::Inventaire(size_t nb) : m_nb(nb)
 {
-	m_tab.resize(m_nb);
+	if (m_nb == 0)
+	{
+		m_nb = 1;
+		m_tab.resize(m_nb);
+	}
+	else
+	{
+		m_tab.resize(m_nb);
+	}
 }
 
 Inventaire::~Inventaire()
@@ -53,9 +61,9 @@ void Inventaire::affiche() const
 
 void Inventaire::init(int nb)
 {
-	if (nb > 19 || nb < 0) // a tester !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	if (!(nb > 19) || !(nb < 0)) // a tester !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	{
-
+		m_tab[nb].init();
 	}
 	/*else if (nb < 0)
 	{
@@ -63,7 +71,7 @@ void Inventaire::init(int nb)
 	}*/
 	else
 	{
-		m_tab[nb].init();
+		
 	}
 }
 

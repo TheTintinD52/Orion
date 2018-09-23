@@ -2,17 +2,17 @@
 
 using namespace std;
 
-Outil::Outil() : Outillage()
+Outil::Outil() : Outil(0, "Default", 0)
 {
 
 }
 
-Outil::Outil(int id) : Outillage(id)
+Outil::Outil(int id) : Outil(id, "Default", 0)
 {
 
 }
 
-Outil::Outil(int id, string nom) : Outillage(id, nom)
+Outil::Outil(int id, string nom) : Outil(id, nom, 0)
 {
 
 }

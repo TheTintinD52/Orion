@@ -2,43 +2,43 @@
 
 using namespace std;
 
-Joueur::Joueur() : Entite(), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur() : Entite(0, 0, "Default"), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(int vie) : Entite(vie), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(int vie) : Entite(vie, 0 ,"Default"), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(string nomPerso, int vie) : Entite(nomPerso, vie), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(int vie, string nomPerso) : Entite(vie, 0, nomPerso), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu) : Entite(nomPerso, vie, endu), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(int vie, int endu, string nomPerso) : Entite(vie, endu, nomPerso), m_faim(0), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim) : Entite(nomPerso, vie, endu), m_faim(faim), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(int vie, int endu, string nomPerso, int faim) : Entite(vie, endu, nomPerso), m_faim(faim), m_inventaire(NULL), m_arme(NULL), m_outil(NULL)
 {
 
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &inventory) : Entite(nomPerso, vie, endu), m_faim(faim), m_arme(NULL), m_outil(NULL)
+Joueur::Joueur(int vie, int endu, string nomPerso, int faim, Inventaire &inventory) : Entite(vie, endu, nomPerso), m_faim(faim), m_arme(NULL), m_outil(NULL)
 {
 	m_inventaire = new Inventaire(inventory);
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &inventory, Arme &arme) : Entite(nomPerso, vie, endu), m_faim(faim), m_outil(NULL)
+Joueur::Joueur(int vie, int endu, string nomPerso, int faim, Inventaire &inventory, Arme &arme) : Entite(vie, endu, nomPerso), m_faim(faim), m_outil(NULL)
 {
 	m_inventaire = new Inventaire(inventory);
 	m_arme = new Arme(arme);
 }
 
-Joueur::Joueur(string nomPerso, int vie, int endu, int faim, Inventaire &inventory, Arme &arme, Outil &outil) : Entite(nomPerso, vie, endu), m_faim(faim)
+Joueur::Joueur(int vie, int endu, string nomPerso, int faim, Inventaire &inventory, Arme &arme, Outil &outil) : Entite(vie, endu, nomPerso), m_faim(faim)
 {
 	m_inventaire = new Inventaire(inventory);
 	m_arme = new Arme(arme);

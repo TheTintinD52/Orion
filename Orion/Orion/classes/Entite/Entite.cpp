@@ -1,23 +1,23 @@
-#include "Entite.h"
+#include <Entite\Entite.h>
 
 using namespace std;
 
-Entite::Entite() : m_nom("Error"), m_vie(0), m_endurance(0)
+Entite::Entite() : Entite(0, 0, "Default")
 {
 
 }
 
-Entite::Entite(int vie) : m_nom("Error"), m_vie(vie), m_endurance(0)
+Entite::Entite(int vie) : Entite(vie, 0 , "Default")
 {
 
 }
 
-Entite::Entite(string nom, int vie) : m_nom(nom), m_vie(vie), m_endurance(0)
+Entite::Entite(int vie, string nom) : Entite(vie, 0, nom)
 {
 
 }
 
-Entite::Entite(string nom, int vie, int endurance) : m_nom(nom), m_vie(vie), m_endurance(endurance)
+Entite::Entite(int vie, int endurance, string nom) : m_vie(vie), m_endurance(endurance), m_nom(nom)
 {
 
 }
@@ -76,16 +76,6 @@ void Entite::Setvie(int vie)
 	m_vie = vie;
 }
 
-string Entite::Getnom() const
-{
-	return m_nom;
-}
-
-void Entite::Setnom(string nom)
-{
-	m_nom = nom;
-}
-
 int Entite::Getendurance() const
 {
 	return m_endurance;
@@ -94,4 +84,14 @@ int Entite::Getendurance() const
 void Entite::Setendurance(int endurance)
 {
 	m_endurance = endurance;
+}
+
+string Entite::Getnom() const
+{
+	return m_nom;
+}
+
+void Entite::Setnom(string nom)
+{
+	m_nom = nom;
 }

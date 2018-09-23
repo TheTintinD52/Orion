@@ -2,12 +2,12 @@
 
 using namespace std;
 
-Objet::Objet() : m_id(0), m_nom("None")
+Objet::Objet() : Objet(0, "Default")
 {
 
 }
 
-Objet::Objet(int id) : m_id(id), m_nom("None")
+Objet::Objet(int id) : Objet(id, "Default")
 {
 
 }

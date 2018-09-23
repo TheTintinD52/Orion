@@ -12,9 +12,9 @@ class Ennemi : public Entite
 public:
 	Ennemi();
 	Ennemi(int);
-	Ennemi(std::string, int);
-	Ennemi(std::string, int, int);
-	Ennemi(std::string, int, int, Arme&);
+	Ennemi(int, std::string);
+	Ennemi(int, int ,std::string);
+	Ennemi(int, int, std::string, Arme&);
 	virtual ~Ennemi();
 	Ennemi(const Ennemi& other);
 	Ennemi& operator=(const Ennemi& other);

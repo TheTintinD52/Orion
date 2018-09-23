@@ -2,22 +2,22 @@
 
 using namespace std;
 
-Arme::Arme() : Outillage(), m_degat(0)
+Arme::Arme() : Arme(0, "Default", 0, 0)
 {
 
 }
 
-Arme::Arme(int id) : Outillage(id), m_degat(0)
+Arme::Arme(int id) : Arme(id, "Default", 0, 0)
 {
 
 }
 
-Arme::Arme(int id, string nom) : Outillage(id, nom), m_degat(0)
+Arme::Arme(int id, string nom) : Arme(id, nom, 0, 0)
 {
 
 }
 
-Arme::Arme(int id, string nom, int degat) : Outillage(id, nom), m_degat(degat)
+Arme::Arme(int id, string nom, int degat) : Arme(id, nom, degat, 0)
 {
 
 }

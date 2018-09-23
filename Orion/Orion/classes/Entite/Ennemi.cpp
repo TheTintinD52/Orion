@@ -2,27 +2,27 @@
 
 using namespace std;
 
-Ennemi::Ennemi() : Entite(), m_arme(NULL)
+Ennemi::Ennemi() : Entite(0, 0 ,"Default"), m_arme(NULL)
 {
 
 }
 
-Ennemi::Ennemi(int vie) : Entite(vie), m_arme(NULL)
+Ennemi::Ennemi(int vie) : Entite(vie, 0, "Default"), m_arme(NULL)
 {
 
 }
 
-Ennemi::Ennemi(string nomPerso, int vie) : Entite(nomPerso, vie), m_arme(NULL)
+Ennemi::Ennemi(int vie, string nomPerso) : Entite(vie, 0, nomPerso), m_arme(NULL)
 {
 
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu) : Entite(nomPerso, vie, endu), m_arme(NULL)
+Ennemi::Ennemi(int vie, int endu, string nomPerso) : Entite(vie, endu, nomPerso), m_arme(NULL)
 {
 
 }
 
-Ennemi::Ennemi(string nomPerso, int vie, int endu, Arme &arme) : Entite(nomPerso, vie, endu)
+Ennemi::Ennemi(int vie, int endu, string nomPerso, Arme &arme) : Entite(vie, endu, nomPerso)
 {
 	m_arme = new Arme(arme);
 }

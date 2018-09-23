@@ -7,13 +7,14 @@
 class Point
 {
 protected:
-	float m_x, m_y, m_r, m_t;
+	float m_x, m_y, m_z, m_r, m_t;
 	void majpolaire();
 	void majcart();
 public:
 	Point();
 	Point(float);
 	Point(float, float);
+	Point(float, float, float);
 	Point(const Point &);
 	virtual ~Point();
 	Point& operator=(const Point &);
@@ -35,6 +36,8 @@ public:
 	void Setx(float);
 	float Gety() const;
 	void Sety(float);
+	float Getz() const;
+	void Setz(float);
 	float Getr() const;
 	void Setr(float);
 	float Gett() const;

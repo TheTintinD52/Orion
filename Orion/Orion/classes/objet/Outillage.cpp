@@ -2,17 +2,17 @@
 
 using namespace std;
 
-Outillage::Outillage() : Objet(), m_dura(0)
+Outillage::Outillage() : Outillage(0, "Default", 0)
 {
 
 }
 
-Outillage::Outillage(int id) : Objet(id), m_dura(0)
+Outillage::Outillage(int id) : Outillage(id, "Default", 0)
 {
 
 }
 
-Outillage::Outillage(int id, string nom) : Objet(id, nom), m_dura(0)
+Outillage::Outillage(int id, string nom) : Outillage(id, nom , 0)
 {
 
 }
